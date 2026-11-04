@@ -641,6 +641,15 @@ img, svg { display: block; max-width: 100%; }
 }
 
 /* ============================================
+   CERTIFICATIONS
+============================================ */
+.certifications {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* ============================================
    TIMELINE
 ============================================ */
 .timeline {
@@ -947,6 +956,7 @@ img, svg { display: block; max-width: 100%; }
     width: calc(50% - 11px);
   }
   .projects { grid-template-columns: 1fr; }
+  .certifications { grid-template-columns: 1fr; }
   .timeline__item { grid-template-columns: 1fr; gap: 8px; }
   .contact__links { flex-direction: column; }
   .detail-grid { grid-template-columns: 1fr; gap: 36px; }
