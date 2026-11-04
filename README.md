@@ -6,9 +6,9 @@
 
 **Software Engineering Undergraduate · Riphah International University · Sahiwal, Pakistan**
 
-[![Open to Work](https://img.shields.io/badge/Open_to-Internships_and_Freelance-brightgreen?style=for-the-badge)](https://www.linkedin.com/in/malikaliiraza)
+[![Open to Work](https://img.shields.io/badge/Open_to-Internships_and_Freelance-brightgreen?style=for-the-badge)](https://www.linkedin.com/in/malikaliraza/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-malikaliiraza.github.io-blue?style=for-the-badge)](https://malikaliiraza.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/malikaliiraza)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/malikaliraza/)
 [![Flutter](https://img.shields.io/badge/Focus-Flutter_and_Dart-02569B?style=for-the-badge&logo=flutter)](https://github.com/malikaliiraza)
 ![Profile Views](https://komarev.com/ghpvc/?username=malikaliiraza&color=00B4D8&style=flat-square)
 
@@ -16,17 +16,17 @@
 
 ---
 
-## Recruiter Quick Scan — Everything in 10 Seconds
+## Overview
 
-| What you are looking at | What you will find |
+| Focus | Details |
 |---|---|
 | **Strongest base** | OOP and problem solving — real projects in C++ and Python, not just tutorials |
 | **Current focus** | Flutter, Clean Architecture, REST APIs, Firebase — industry-ready mobile development |
 | **Best built project** | Personal Finance Manager — abstract classes, polymorphism, reports, 116 commits |
 | **Next level** | Four future projects below — each with an AI, offline, or predictive feature |
-| **Contact** | Portfolio and LinkedIn above — email is intentionally not in a public README, to avoid spam |
+| **Contact** | Portfolio and LinkedIn above |
 
-> **My principle:** Every project should either be something uncommon, or, if it is common, it must have a future feature that makes it different. Building a UI clone alone is not my goal.
+Focus: uncommon projects, or common projects with a future feature that makes them different.
 
 ---
 
@@ -42,18 +42,20 @@
 |---|---|
 | **Languages** | C++ · Python · Dart · HTML · CSS · SQL |
 | **Mobile** | Flutter · Dart · Responsive UI · State Management |
-| **Backend (building)** | Django · MySQL · REST APIs · Firebase · JWT Auth |
+| **Backend** | Django · MySQL · REST APIs · Firebase · JWT Auth |
 | **Practices** | Clean Architecture · OOP & SOLID · Git & GitHub · Accessible UI |
 
 ---
 
 ## GitHub Activity
 
+| | |
+|---|---|
+| **Public repositories** | 5 |
+| **Main languages** | C++, Python, CSS |
+| **Built projects** | Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
+
 <div align="center">
-
-![Malik's GitHub Stats](https://github-readme-stats.vercel.app/api?username=malikaliiraza&show_icons=true&theme=tokyonight&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=malikaliiraza&layout=compact&theme=tokyonight&hide_border=true)
 
 ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=malikaliiraza&theme=tokyonight&hide_border=true)
 
@@ -73,7 +75,7 @@
 
 ---
 
-## Built Projects — Already Complete
+## Built Projects
 
 | Project | What it is | Stack | Status |
 |---|---|---|---|
@@ -85,9 +87,7 @@
 
 ---
 
-## Project Screenshots — Real Screenshots From My Own Repos
-
-These images are loaded directly from the original project repos on the `main` branch, so they will stay in sync with those repos.
+## Project Screenshots
 
 ### Personal Finance Manager — Sample Run
 
@@ -103,19 +103,15 @@ These images are loaded directly from the original project repos on the `main` b
 
 <img src="https://raw.githubusercontent.com/malikaliiraza/Apex-Dash/main/Screenshots/Menu.PNG" alt="Apex Dash menu" width="600">
 
-> Note: Quiz Quest has no image file in its repo — only code and a text sample screen — so no screenshot was added for it, rather than using a fake or blank image.
-
 ---
 
-## Future Projects — Roadmap, Not Fake Claims
-
-> **Honest note:** The four projects below are in my **roadmap**, not complete yet. They are listed so a recruiter can see my direction, thinking, and ambition — not a fake completed list.
+## Future Projects — Roadmap
 
 ### 1. CashWise AI — Pakistan-first Finance Coach
 **Not just another expense tracker.**
 - PKR budgets, categories, and charts — offline-first Flutter app
 - Receipt scan (OCR) for automatic entry
-- **Future feature — AI Cash-Flow Predictor:** Predicts, before the month ends, when money will run out, warns before overspending, in Urdu and English
+- **AI Cash-Flow Predictor:** Predicts, before the month ends, when money will run out, warns before overspending, in Urdu and English
 
 ```mermaid
 flowchart LR
@@ -128,19 +124,19 @@ flowchart LR
 ### 2. SafeRide Campus — University Bus Safety + Booking
 **Not just seat booking.**
 - Live bus location, seat booking, offline QR ticket
-- **Future feature — AI Delay Predictor + Safety Alerts:** Predicts delays from route, traffic, and past data, and sends safe-arrival alerts to parents. Built as a niche solution for Pakistani universities
+- **AI Delay Predictor + Safety Alerts:** Predicts delays from route, traffic, and past data, and sends safe-arrival alerts to parents. Built as a niche solution for Pakistani universities
 
 ### 3. LearnLoop AI — Quizzes From Your Own Notes
 **Not just another quiz app.**
 - Upload a PDF or notes, AI generates a quiz from them
 - Spaced repetition and weak-topic analytics
-- **Future feature — AI Tutor:** On a wrong answer, it does not just say "wrong" — it re-explains the concept in simple Urdu or English
+- **AI Tutor:** On a wrong answer, it does not just say "wrong" — it re-explains the concept in simple Urdu or English
 
 ### 4. CropDoctor Offline — On-Device AI for Farmers
 **Not just an information app.**
 - Phone camera detects crop disease — offline, with on-device AI
 - Urdu voice guidance: what the problem is, and what to do about it
-- **Future feature — Mandi Price Predictor:** Shows price trends so a farmer can sell at the right time
+- **Mandi Price Predictor:** Shows price trends so a farmer can sell at the right time
 
 **Backend for all of the above:** Django + MySQL REST API with JWT authentication — so these are real full-stack products, not UI only.
 
@@ -148,7 +144,7 @@ flowchart LR
 
 ---
 
-## My Roadmap
+## Roadmap
 
 | Stage | Focus |
 |---|---|
@@ -158,7 +154,7 @@ flowchart LR
 
 ---
 
-## My Approach
+## Approach
 
 - Clean, readable code — more important than clever code
 - Simple, consistent, accessible UI
@@ -174,7 +170,7 @@ flowchart LR
 **Internships · Freelance · Flutter / Full-Stack Collaboration**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00B4D8?style=for-the-badge)](https://malikaliiraza.github.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/malikaliiraza)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/malikaliraza/)
 
 *Thank you for visiting my profile — work on the future projects above is in progress. Stay tuned.*
 
