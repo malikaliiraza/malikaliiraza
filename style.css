@@ -431,11 +431,14 @@ img, svg { display: block; max-width: 100%; }
 ============================================ */
 .skills {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* Six equal tracks: each card spans two tracks, so desktop shows a
+     balanced 3 + 2 layout with the last row centred — no orphan card. */
+  grid-template-columns: repeat(6, 1fr);
   gap: 22px;
 }
 
 .skill-card {
+  grid-column: span 2;
   background: linear-gradient(165deg, rgba(30, 27, 38, 0.6), rgba(12, 12, 17, 0.6));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -444,6 +447,10 @@ img, svg { display: block; max-width: 100%; }
   padding: 28px 24px;
   transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
+
+/* Centre the last row of the grid: card 4 takes tracks 2-3, card 5 takes tracks 4-5. */
+.skill-card:nth-child(4) { grid-column: 2 / span 2; }
+.skill-card:nth-child(5) { grid-column: 4 / span 2; }
 
 .skill-card:hover {
   transform: translateY(-5px);
@@ -929,6 +936,16 @@ img, svg { display: block; max-width: 100%; }
   .schematic { order: -1; max-width: 340px; margin: 0 auto 20px; }
   .about__grid { grid-template-columns: 1fr; gap: 32px; }
   .skills { grid-template-columns: repeat(2, 1fr); }
+  /* Reset the desktop centring. With 5 cards in 2 columns the last card
+     would sit alone, so centre it at one-column width instead. */
+  .skill-card,
+  .skill-card:nth-child(4),
+  .skill-card:nth-child(5) { grid-column: auto; }
+  .skills > .skill-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 11px);
+  }
   .projects { grid-template-columns: 1fr; }
   .timeline__item { grid-template-columns: 1fr; gap: 8px; }
   .contact__links { flex-direction: column; }
@@ -959,4 +976,9 @@ img, svg { display: block; max-width: 100%; }
 
 @media (max-width: 520px) {
   .skills { grid-template-columns: 1fr; }
+  /* Single column: every card, including the last, spans the full width. */
+  .skills > .skill-card:last-child {
+    justify-self: stretch;
+    width: auto;
+  }
 }
