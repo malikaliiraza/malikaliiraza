@@ -662,3 +662,25 @@ img, svg { display: block; max-width: 100%; }
 @media (max-width: 520px) {
   .skills { grid-template-columns: 1fr; }
 }
+/* ============================================
+   PROJECT SCREENSHOTS
+============================================ */
+.spec-card__shot {
+  margin: 0 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.spec-card__shot img {
+  width: 100%;
+  height: auto;
+}
+.spec-card__shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+}
+.spec-card__shots .spec-card__shot {
+  margin: 0;
+}
