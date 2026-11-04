@@ -3,26 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bus Ticket Reservation System — Malik Ali Raza</title>
-<meta name="description" content="Bus Ticket Reservation System — a menu-driven C++ bus reservation app with separate Admin and Booking interfaces, a 10-seat live booking layout, and tiered fare discounts.">
+<title>Bus Ticket Reservation System – Malik Ali Raza</title>
+<meta name="description" content="Bus Ticket Reservation System – a menu-driven C++ bus reservation app with separate Admin and Booking interfaces, a 10-seat live booking layout, and tiered fare discounts.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="gridfield" aria-hidden="true"></div>
 
-<nav class="nav">
+<nav class="nav" id="nav">
   <a href="index.html" class="nav__mark">M.A.R</a>
-  <a href="index.html" class="nav__back" data-transition>← Back to Home</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html" aria-current="page">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
 <main>
-
   <section class="section detail-hero">
-    <p class="section__eyebrow">// PROJECT — C++ APPLICATION · 2024</p>
+    <p class="section__eyebrow">// PROJECT – C++ APPLICATION · 2024</p>
     <h1>Bus Ticket Reservation System</h1>
     <p class="detail-lede">A menu-driven bus ticket reservation system in C++ with separate Admin and Booking interfaces. It renders a 10-seat booking layout with live seat status, tracks seat availability, and applies tiered fare discounts for students, faculty, and staff.</p>
     <div class="detail-actions">
@@ -35,7 +44,7 @@
     <div class="detail-shots">
       <figure class="detail-shot">
         <img src="https://raw.githubusercontent.com/malikaliiraza/Bus-Ticket-Reservation-System-/main/Sample%20Run.png" alt="Bus Ticket Reservation System sample run" loading="lazy">
-        <figcaption>Sample Run.png — sample run from the project repository</figcaption>
+        <figcaption>Sample Run.png – sample run from the project repository</figcaption>
       </figure>
     </div>
   </section>
@@ -60,19 +69,18 @@
           <span>C++</span><span>Structures</span><span>Console Application</span><span>Visual Studio</span>
         </div>
         <h2>Source</h2>
-        <p class="detail-source"><a class="btn btn--ghost" href="https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-" target="_blank" rel="noopener">GitHub repository</a></p>
+        <p class="detail-source"><a class="btn btn--ghost" href="https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-" target="_blank" rel="noopener">GitHub Repository</a></p>
       </div>
     </div>
   </section>
 
   <section class="section back-wrap">
-    <a class="btn btn--ghost" href="index.html" data-transition>← Back to Home</a>
+    <a class="btn btn--ghost" href="projects.html" data-transition>← Back to Projects</a>
   </section>
-
 </main>
 
 <footer class="footer">
-  <p>Designed &amp; built by Malik Ali Raza · <span id="year"></span></p>
+  <p>Designed & built by Malik Ali Raza · <span id="year"></span></p>
 </footer>
 
 <script src="script.js"></script>
