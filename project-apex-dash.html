@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Dash — Malik Ali Raza</title>
+<meta name="description" content="Apex Dash — a fast-paced, rhythm-based obstacle-dodging game built in Scratch 3.0: auto-scrolling world, timed jumps, real-time collision detection, and score tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gridfield" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav__mark">M.A.R</a>
+  <a href="index.html" class="nav__back" data-transition>← Back to Home</a>
+</nav>
+
+<main>
+
+  <section class="section detail-hero">
+    <p class="section__eyebrow">// PROJECT — SCRATCH GAME</p>
+    <h1>Apex Dash</h1>
+    <p class="detail-lede">A fast-paced, rhythm-based obstacle-dodging game built in Scratch 3.0. Guide your character through an auto-scrolling world, timing jumps to clear obstacles and rack up the highest score — a beginner-friendly arcade game that teaches event-driven programming, timing-based game logic, and interactive score tracking.</p>
+    <div class="detail-actions">
+      <a class="btn btn--primary" href="https://github.com/malikaliiraza/Apex-Dash" target="_blank" rel="noopener">View repo on GitHub</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section__eyebrow">// SCREENSHOTS</p>
+    <div class="detail-shots detail-shots--duo">
+      <figure class="detail-shot">
+        <img src="https://raw.githubusercontent.com/malikaliiraza/Apex-Dash/main/Screenshots/Gameplay.PNG" alt="Apex Dash gameplay" loading="lazy">
+        <figcaption>Screenshots/Gameplay.PNG — gameplay from the project repository</figcaption>
+      </figure>
+      <figure class="detail-shot">
+        <img src="https://raw.githubusercontent.com/malikaliiraza/Apex-Dash/main/Screenshots/Menu.PNG" alt="Apex Dash menu" loading="lazy">
+        <figcaption>Screenshots/Menu.PNG — menu from the project repository</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="detail-grid">
+      <div>
+        <h2>Overview</h2>
+        <ul class="detail-list">
+          <li>Guide your character through an auto-scrolling world, timing jumps to clear obstacles and chase the highest score</li>
+          <li>Jump mechanic with a rise/fall arc; auto-scrolling level with adjustable scroll speed</li>
+          <li>Real-time obstacle collision detection and real-time score tracking</li>
+          <li>Background music and sound effects, with custom sprites and backdrops</li>
+          <li>Built with block-based programming: variables, loops (<code>forever</code>, <code>repeat</code>), event handling (<code>when key pressed</code>, <code>when flag clicked</code>), collision detection, timing-based game logic, score tracking, and animation</li>
+          <li>Controls: <code>Space</code> = jump, Green Flag = start game</li>
+          <li>To run it: download the repository, open <code>apex-dash.sb3</code> in Scratch Desktop, Scratch Online, or TurboWarp, click the Green Flag, and press Space to jump</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Tech stack</h2>
+        <div class="detail-stack">
+          <span>Scratch 3.0</span><span>Block-Based Programming</span><span>Event-Driven Logic</span>
+        </div>
+        <h2>Source</h2>
+        <p class="detail-source"><a class="btn btn--ghost" href="https://github.com/malikaliiraza/Apex-Dash" target="_blank" rel="noopener">GitHub repository</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section back-wrap">
+    <a class="btn btn--ghost" href="index.html" data-transition>← Back to Home</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Malik Ali Raza · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
