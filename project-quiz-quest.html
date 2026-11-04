@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Quest — Malik Ali Raza</title>
+<meta name="description" content="Quiz Quest — a colorful terminal-based trivia game in pure Python, inspired by Who Wants to Be a Millionaire: 16 questions, 3 rounds, secured prize tiers, and lifelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gridfield" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav__mark">M.A.R</a>
+  <a href="index.html" class="nav__back" data-transition>← Back to Home</a>
+</nav>
+
+<main>
+
+  <section class="section detail-hero">
+    <p class="section__eyebrow">// PROJECT — PYTHON GAME</p>
+    <h1>Quiz Quest</h1>
+    <p class="detail-lede">A colorful terminal-based quiz game in pure Python, inspired by Who Wants to Be a Millionaire. Answer 16 multiple-choice questions across 3 rounds of increasing difficulty to win up to Rs. 150,000 — with secured prize tiers, three lifelines, and the option to quit anytime and keep your secured amount.</p>
+    <div class="detail-actions">
+      <a class="btn btn--primary" href="https://github.com/malikaliiraza/Quiz-Quest" target="_blank" rel="noopener">View repo on GitHub</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="detail-grid">
+      <div>
+        <h2>Overview</h2>
+        <ul class="detail-list">
+          <li>16 multiple-choice questions on science, history, geography, Islamic history, art, and pop culture</li>
+          <li>Three rounds of increasing difficulty with secured prize tiers locked in at the end of each round</li>
+          <li>Round 1 — Easy: 8 questions at Rs. 5,000 each (Rs. 40,000 total)</li>
+          <li>Round 2 — Medium: 5 questions at Rs. 10,000 each (Rs. 50,000 total); secured amount Rs. 90,000</li>
+          <li>Round 3 — Final (Hard): 3 questions at Rs. 20,000 each (Rs. 60,000 total); secured amount Rs. 150,000</li>
+          <li>Three lifelines, one use each per game: 50/50 removes two incorrect options; Audience Poll shows a simulated audience vote as percentages; Skip Question skips without winning or losing money</li>
+          <li>Quit anytime and keep the secured amount; end-of-game report; replay without restarting</li>
+          <li>Colorful terminal interface using ANSI escape codes, with input validation</li>
+          <li>Pure Python — standard library only, nothing to install; requires Python 3.6+ and a terminal with ANSI color support</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Tech stack</h2>
+        <div class="detail-stack">
+          <span>Python</span><span>Standard Library</span><span>ANSI Terminal UI</span>
+        </div>
+        <h2>Source</h2>
+        <p class="detail-source"><a class="btn btn--ghost" href="https://github.com/malikaliiraza/Quiz-Quest" target="_blank" rel="noopener">GitHub repository</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section back-wrap">
+    <a class="btn btn--ghost" href="index.html" data-transition>← Back to Home</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Malik Ali Raza · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
