@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Finance Manager — Malik Ali Raza</title>
+<meta name="description" content="Personal Finance Manager — a console-based finance tracker in C++ built around an abstract Record base class, with balance-validated transactions, meeting scheduling, and daily/monthly reports.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="gridfield" aria-hidden="true"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav__mark">M.A.R</a>
+  <a href="index.html" class="nav__back" data-transition>← Back to Home</a>
+</nav>
+
+<main>
+
+  <section class="section detail-hero">
+    <p class="section__eyebrow">// PROJECT — C++ APPLICATION · 2025</p>
+    <h1>Personal Finance Manager</h1>
+    <p class="detail-lede">A console-based personal finance management system in C++ that applies object-oriented programming principles: it tracks income, expenses, and account balance, schedules meetings, and generates daily and monthly financial reports — built around an abstract <code>Record</code> base class with <code>Transaction</code> and <code>Meeting</code> subclasses exercising inheritance and polymorphism.</p>
+    <div class="detail-actions">
+      <a class="btn btn--primary" href="https://github.com/malikaliiraza/Personal-Finance-Manager-System" target="_blank" rel="noopener">View repo on GitHub</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section__eyebrow">// SCREENSHOTS</p>
+    <div class="detail-shots">
+      <figure class="detail-shot">
+        <img src="https://raw.githubusercontent.com/malikaliiraza/Personal-Finance-Manager-System/main/Sample%20Run.png" alt="Personal Finance Manager sample run" loading="lazy">
+        <figcaption>Sample Run.png — sample run from the project repository</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="detail-grid">
+      <div>
+        <h2>Overview</h2>
+        <ul class="detail-list">
+          <li>Password-protected user authentication</li>
+          <li>Income and expense tracking with balance validation that prevents overspending by validating the available balance</li>
+          <li>Transaction history with daily and monthly report generation</li>
+          <li>Meeting scheduling built on the same <code>Record</code> class hierarchy</li>
+          <li>Automatic profit and loss calculation</li>
+          <li>Modular class-based architecture: an abstract <code>Record</code> base class with <code>Transaction</code> / <code>Meeting</code> subclasses, exercising inheritance and polymorphism</li>
+          <li>Data managed with STL <code>vector</code> and <code>map</code> containers</li>
+          <li>Built in Microsoft Visual Studio</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Tech stack</h2>
+        <div class="detail-stack">
+          <span>C++</span><span>OOP</span><span>STL</span><span>Visual Studio</span>
+        </div>
+        <h2>Source</h2>
+        <p class="detail-source"><a class="btn btn--ghost" href="https://github.com/malikaliiraza/Personal-Finance-Manager-System" target="_blank" rel="noopener">GitHub repository</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section back-wrap">
+    <a class="btn btn--ghost" href="index.html" data-transition>← Back to Home</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Malik Ali Raza · <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
