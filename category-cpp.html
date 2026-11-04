@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ — Skills — Malik Ali Raza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gridfield"></div>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__home">Home</a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="about.html" data-transition>About</a></li>
+      <li><a href="skills.html" aria-current="page" data-transition>Skills</a></li>
+      <li><a href="projects.html" data-transition>Projects</a></li>
+      <li><a href="experience.html" data-transition>Experience</a></li>
+      <li><a href="certifications.html" data-transition>Certifications</a></li>
+      <li><a href="contact.html" data-transition>Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="page-head">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html" data-transition>Home</a><span class="crumbs__sep">/</span><a href="skills.html" data-transition>Skills</a><span class="crumbs__sep">/</span><span aria-current="page">C++</span>
+      </nav>
+      <p class="eyebrow">// CATEGORY</p>
+      <h1>C++</h1>
+      <p class="page-head__lede">Object-oriented console applications — the strongest base.</p>
+    </section>
+    <section class="section">
+      <h2 class="section__eyebrow">SKILLS IN THIS CATEGORY</h2>
+      <ul class="cat-card__skills">
+        <li>C++ (OOP)</li>
+      </ul>
+    </section>
+    <section class="section">
+      <h2 class="section__eyebrow">PROJECTS</h2>
+      <div class="proj-mini-grid">
+        <a class="proj-mini" href="project-personal-finance.html" data-transition>
+          <span class="proj-mini__tag">C++ Application · 2025</span>
+          <h3>Personal Finance Manager</h3>
+          <p>Console finance app with OOP design — tracks income, expenses and balance, schedules meetings, and generates daily and monthly reports.</p>
+          <span class="proj-mini__go">View detail →</span>
+        </a>
+        <a class="proj-mini" href="project-bus-ticket.html" data-transition>
+          <span class="proj-mini__tag">C++ Application · 2024</span>
+          <h3>Bus Ticket Reservation System</h3>
+          <p>Menu-driven bus reservation system with separate Admin and Booking interfaces, built with C++ structures.</p>
+          <span class="proj-mini__go">View detail →</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>Designed &amp; built by Malik Ali Raza · <span id="year">2026</span></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
