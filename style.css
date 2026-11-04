@@ -1308,7 +1308,7 @@ img, svg { display: block; max-width: 100%; }
 /* ---- 2) Back button element normalization ---- */
 button.btn {
   cursor: pointer;
-  font-family: inherit;
+  
 }
 
 /* ---- 3) Category Explorer (skills.html) ---- */
