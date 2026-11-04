@@ -7,24 +7,33 @@
 <meta name="description" content="Quiz Quest — a colorful terminal-based trivia game in pure Python, inspired by Who Wants to Be a Millionaire: 16 questions, 3 rounds, secured prize tiers, and lifelines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="gridfield" aria-hidden="true"></div>
 
-<nav class="nav">
+<nav class="nav" id="nav">
   <a href="index.html" class="nav__mark">M.A.R</a>
-  <a href="index.html" class="nav__back" data-transition>← Back to Home</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html" aria-current="page">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
 <main>
-
   <section class="section detail-hero">
     <p class="section__eyebrow">// PROJECT — PYTHON GAME</p>
     <h1>Quiz Quest</h1>
-    <p class="detail-lede">A colorful terminal-based quiz game in pure Python, inspired by Who Wants to Be a Millionaire. Answer 16 multiple-choice questions across 3 rounds of increasing difficulty to win up to Rs. 150,000 — with secured prize tiers, three lifelines, and the option to quit anytime and keep your secured amount.</p>
+    <p class="detail-lede">A colorful terminal-based quiz game in pure Python, inspired by Who Wants to Be a Millionaire. Answer 16 multiple-choice questions across 3 rounds of increasing difficulty to win up to Rs. 150,000 – with secured prize tiers, three lifelines, and the option to quit anytime and keep your secured amount.</p>
     <div class="detail-actions">
       <a class="btn btn--primary" href="https://github.com/malikaliiraza/Quiz-Quest" target="_blank" rel="noopener">View repo on GitHub</a>
     </div>
@@ -58,13 +67,13 @@
   </section>
 
   <section class="section back-wrap">
-    <a class="btn btn--ghost" href="index.html" data-transition>← Back to Home</a>
+    <a class="btn btn--ghost" href="projects.html" data-transition>← Back to Projects</a>
   </section>
 
 </main>
 
 <footer class="footer">
-  <p>Designed &amp; built by Malik Ali Raza · <span id="year"></span></p>
+  <p>Designed & built by Malik Ali Raza · <span id="year"></span></p>
 </footer>
 
 <script src="script.js"></script>
