@@ -24,7 +24,7 @@ if (yearEl) {
 
 // Scroll-reveal for sections and cards
 const revealTargets = document.querySelectorAll(
-  '.section, .spec-card, .skill-card, .timeline__item, .skillnet, .cert-feature, .cta-band, .teaser-head'
+  '.section, .spec-card, .skill-card, .timeline__item, .skillnet, .cert-feature, .cta-band, .teaser-head, .cat-card, .proj-mini'
 );
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -63,7 +63,7 @@ function goTo(url) {
 
 // Fade/slide out before navigating: explicit data-transition links
 // plus the shared site nav (every internal page link).
-document.querySelectorAll('a[data-transition], .nav__links a, .nav__mark').forEach(link => {
+document.querySelectorAll('a[data-transition], .nav__links a, .nav__home').forEach(link => {
   link.addEventListener('click', (event) => {
     const url = link.getAttribute('href');
     // Leave in-page anchors and external/special links (http, mailto, ...) alone.
@@ -91,3 +91,15 @@ if (!prefersReducedMotion) {
     });
   });
 }
+// History-aware Back buttons: return to the exact previous screen,
+// falling back to a safe page when there is no usable history.
+document.querySelectorAll('.back-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const fallback = btn.getAttribute('data-fallback');
+    if (window.history.length > 1) {
+      window.history.back();
+    } else if (fallback) {
+      window.location.href = fallback;
+    }
+  });
+});
