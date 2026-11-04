@@ -24,7 +24,7 @@ if (yearEl) {
 
 // Scroll-reveal for sections and cards
 const revealTargets = document.querySelectorAll(
-  '.section, .spec-card, .skill-card, .timeline__item'
+  '.section, .spec-card, .skill-card, .timeline__item, .skillnet, .cert-feature, .cta-band, .teaser-head'
 );
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -49,7 +49,7 @@ if (!prefersReducedMotion && 'IntersectionObserver' in window) {
   revealTargets.forEach(el => observer.observe(el));
 }
 
-// Page transitions between home and project detail pages
+// Page transitions between pages (fade/slide, ~300ms)
 function goTo(url) {
   if (prefersReducedMotion || document.body.classList.contains('page-leave')) {
     window.location.href = url;
@@ -61,17 +61,19 @@ function goTo(url) {
   }, 300);
 }
 
-// Fade/slide out before navigating from View Detail / Back to Home links
-document.querySelectorAll('a[data-transition]').forEach(link => {
+// Fade/slide out before navigating: explicit data-transition links
+// plus the shared site nav (every internal page link).
+document.querySelectorAll('a[data-transition], .nav__links a, .nav__mark').forEach(link => {
   link.addEventListener('click', (event) => {
     const url = link.getAttribute('href');
-    if (!url || url.startsWith('#')) return;
+    // Leave in-page anchors and external/special links (http, mailto, ...) alone.
+    if (!url || url.startsWith('#') || /^[a-zA-Z][\w+.-]*:/.test(url)) return;
     event.preventDefault();
     goTo(url);
   });
 });
 
-// Make whole project cards clickable (real links inside still work normally)
+// Make whole project/certificate cards clickable (real links inside still work normally)
 document.querySelectorAll('.spec-card[data-detail]').forEach(card => {
   card.style.cursor = 'pointer';
   card.addEventListener('click', (event) => {
