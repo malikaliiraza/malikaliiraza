@@ -56,12 +56,6 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 | **Main languages** | C++, Python, CSS |
 | **Built projects** | Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
 
-<div align="center">
-
-![GitHub Contributions](https://ghchart.rshah.org/malikaliiraza)
-
-</div>
-
 ---
 
 ## What I Can Build For You
