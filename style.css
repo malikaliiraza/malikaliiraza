@@ -62,7 +62,413 @@ a {
 
 ul { list-style: none; }
 
-img, svg { display: block; max-width: 100%; }
+
+/* ============================================
+   INTERACTIVE DOOR — home
+   Real walnut-and-brass door that swings open in
+   3D to reveal the menu and compact previews.
+============================================ */
+.door {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6px auto 0;
+}
+
+.door__frame {
+  position: relative;
+  width: min(280px, 78vw);
+  aspect-ratio: 3 / 4;
+  padding: 14px;
+  perspective: 1200px;
+  background: linear-gradient(160deg, #241a10 0%, #171007 55%, #0d0804 100%);
+  border: 2px solid var(--gold-deep);
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 1px rgba(245, 214, 123, 0.25);
+}
+
+.door__interior {
+  position: absolute;
+  inset: 14px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(130% 90% at 50% 0%, #ffe9a3 0%, #e9b949 26%, #8a5f1c 55%, #33200a 82%, #170f05 100%);
+  box-shadow: inset 0 0 54px rgba(0, 0, 0, 0.7);
+}
+
+.door__view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px 14px;
+  text-align: center;
+}
+
+.door__view[hidden] {
+  display: none;
+}
+
+.door__menu-kicker {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #2a1c07;
+}
+
+.door__menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  width: 100%;
+}
+
+.door__menu-btn {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: #f7f2e4;
+  background: rgba(24, 14, 4, 0.45);
+  border: 1px solid rgba(247, 242, 228, 0.55);
+  border-radius: 4px;
+  padding: 9px 6px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.door__menu-btn:hover,
+.door__menu-btn:focus-visible {
+  background: #f7f2e4;
+  color: #2a1c07;
+  border-color: #f7f2e4;
+}
+
+.door__close {
+  background: none;
+  border: 0;
+  padding: 4px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #f7f2e4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.door__back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(24, 14, 4, 0.55);
+  border: 1px solid rgba(247, 242, 228, 0.45);
+  border-radius: 999px;
+  color: #f7f2e4;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.1em;
+  padding: 4px 9px;
+  cursor: pointer;
+}
+
+.door__preview-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 700;
+  color: #fff8e1;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.door__preview-text {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #f7f2e4;
+}
+
+.door__preview-text strong {
+  color: #fff3c4;
+}
+
+.door__chip-groups {
+  display: grid;
+  gap: 7px;
+  width: 100%;
+}
+
+.door__chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.door__chip-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffe9a3;
+  margin-right: 2px;
+}
+
+.door__chip {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: #f7f2e4;
+  background: rgba(24, 14, 4, 0.55);
+  border: 1px solid rgba(247, 242, 228, 0.4);
+  border-radius: 999px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.door__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 7px;
+  width: 100%;
+  text-align: left;
+}
+
+.door__list li {
+  display: grid;
+  gap: 1px;
+}
+
+.door__list strong {
+  font-size: 12.5px;
+  color: #fff3c4;
+}
+
+.door__list span {
+  font-size: 11.5px;
+  color: #f7f2e4;
+  opacity: 0.85;
+}
+
+.door__mini-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.door__mini-links a {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: #f7f2e4;
+  background: rgba(24, 14, 4, 0.55);
+  border: 1px solid rgba(247, 242, 228, 0.45);
+  border-radius: 999px;
+  padding: 5px 11px;
+  text-decoration: none;
+}
+
+.door__full {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  color: #ffe9a3;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.door__handle:focus-visible,
+.door__menu-btn:focus-visible,
+.door__back:focus-visible,
+.door__close:focus-visible,
+.door__full:focus-visible,
+.door__mini-links a:focus-visible {
+  outline: 2px solid #fff3c4;
+  outline-offset: 3px;
+}
+
+/* --- The door leaf: dark walnut, wood grain, raised panels, brass --- */
+.door__leaf {
+  position: absolute;
+  inset: 14px;
+  z-index: 2;
+  transform-origin: left center;
+  transition: transform 1.1s cubic-bezier(0.22, 0.61, 0.21, 1);
+  background:
+    radial-gradient(120% 60% at 28% 12%, rgba(255, 205, 120, 0.16) 0%, rgba(255, 205, 120, 0) 55%),
+    repeating-linear-gradient(91deg, rgba(0, 0, 0, 0) 0 20px, rgba(0, 0, 0, 0.12) 20px 21px, rgba(255, 224, 160, 0.035) 21px 25px),
+    repeating-linear-gradient(89deg, rgba(0, 0, 0, 0) 0 46px, rgba(0, 0, 0, 0.08) 46px 47px),
+    linear-gradient(115deg, #5a3520 0%, #462713 30%, #38200f 58%, #4e2c16 80%, #291507 100%);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow:
+    10px 0 24px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(245, 214, 123, 0.18),
+    inset 8px 0 18px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.door[data-open="true"] .door__leaf {
+  transform: rotateY(-104deg);
+  cursor: default;
+}
+
+.door__wood {
+  position: absolute;
+  inset: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.9fr 1.5fr 1fr;
+  gap: 12px;
+}
+
+.door__panel {
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-radius: 3px;
+  background: linear-gradient(135deg, #523218 0%, #3d2210 55%, #2e1a0b 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.5),
+    inset 0 3px 8px rgba(0, 0, 0, 0.55),
+    inset 0 -3px 6px rgba(255, 214, 140, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.door__hinge {
+  position: absolute;
+  left: 5px;
+  width: 13px;
+  height: 42px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #6d5412 0%, #d4af37 40%, #f5d67b 55%, #8f6f1d 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.door__hinge::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff3c4, #8f6f1d 70%);
+}
+
+.door__hinge--top {
+  top: 64px;
+}
+
+.door__hinge--bottom {
+  bottom: 64px;
+}
+
+.door__keyhole {
+  position: absolute;
+  right: 26px;
+  top: 62%;
+  width: 12px;
+  height: 18px;
+  border-radius: 6px 6px 4px 4px;
+  background:
+    radial-gradient(circle at 50% 26%, #050302 0 4px, rgba(0, 0, 0, 0) 5px),
+    linear-gradient(180deg, #f5d67b 0%, #d4af37 45%, #8f6f1d 100%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+
+.door__keyhole::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  width: 3px;
+  height: 7px;
+  margin-left: -1.5px;
+  border-radius: 2px;
+  background: #050302;
+}
+
+.door__handle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 4px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.door__plate {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+  color: var(--gold-light);
+  background: linear-gradient(180deg, #2a1a09 0%, #140c04 100%);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  padding: 5px 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(245, 214, 123, 0.35);
+}
+
+.door__knob {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #fff6cd 0%, #f5d67b 20%, #d4af37 48%, #8f6f1d 80%, #5f4a10 100%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7), inset 0 -2px 4px rgba(0, 0, 0, 0.45);
+  transition: filter 0.2s ease;
+}
+
+.door__handle:hover .door__knob,
+.door__handle:focus-visible .door__knob {
+  filter: brightness(1.18);
+}
+
+.door__step {
+  width: min(340px, 92vw);
+  height: 14px;
+  margin-top: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 3px;
+  background: linear-gradient(180deg, #6b543a 0%, #3d2d1a 55%, #241a0e 100%);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.6);
+}
+
+.door__hint {
+  margin: 10px 0 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .door__leaf,
+  .door__knob,
+  .door__menu-btn {
+    transition: none;
+  }
+}img, svg { display: block; max-width: 100%; }
 
 ::selection { background: rgba(212, 175, 55, 0.35); color: #fff; }
 
