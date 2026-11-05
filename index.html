@@ -1,153 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Malik Ali Raza – Flutter & Web Developer</title>
-<meta name="description" content="Portfolio of Malik Ali Raza – Flutter & Web Developer (B.S. Software Engineering) building real apps with clean architecture: Flutter, Dart, Python, Django, MySQL, and C++.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malik Ali Raza – Flutter & Web Developer</title>
+  <meta name="description" content="Portfolio of Malik Ali Raza – Flutter & Web Developer (B.S. Software Engineering) building real apps with clean architecture: Flutter, Dart, Python, Django, MySQL, and C++.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="page-home">
+  <div class="gridfield" aria-hidden="true"></div>
 
-<div class="gridfield" aria-hidden="true"></div>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__home" aria-current="page">Home</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav__home" aria-current="page">Home</a>
-  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav__links" id="navLinks">
-    <li><a href="about.html">About</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="certifications.html">Certifications</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<main>
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero__inner">
-      <p class="eyebrow">FLUTTER & WEB DEVELOPER — SAHIWAL, PAKISTAN</p>
-      <h1 class="hero__title">Malik&nbsp;Ali&nbsp;Raza</h1>
-      <p class="hero__sub">Flutter & Web Developer building real apps people actually use – clean architecture, responsive UIs, and solid foundations in Django, MySQL, and object-oriented C++ projects. Open to internships and freelance.</p>
-      <div class="hero__actions">
-        <a href="projects.html" class="btn btn--primary">View projects</a>
-        <a href="contact.html" class="btn btn--ghost">Get in touch</a>
-      </div>
-    </div>
-    <div class="schematic" aria-hidden="true">
-      <svg viewBox="0 0 600 460" id="schematicSvg" fill="none">
-        <!-- traces -->
-        <path class="trace" d="M300 230 L300 90"/>
-        <path class="trace" d="M300 230 L150 150"/>
-        <path class="trace" d="M300 230 L450 150"/>
-        <path class="trace" d="M300 230 L150 320"/>
-        <path class="trace" d="M300 230 L450 320"/>
-        <path class="trace" d="M300 230 L300 400"/>
-        <!-- core node -->
-        <circle class="node node--core" cx="300" cy="230" r="30"/>
-        <text class="node-label node-label--core" x="300" y="235" text-anchor="middle">M.A.R</text>
-        <!-- satellite nodes -->
-        <g class="node-group">
-          <circle class="node" cx="300" cy="70" r="20" />
-          <text class="node-label" x="300" y="45" text-anchor="middle">PYTHON</text>
-        </g>
-        <g class="node-group">
-          <circle class="node" cx="140" cy="140" r="20" />
-          <text class="node-label" x="90" y="118" text-anchor="middle">DJANGO</text>
-        </g>
-        <g class="node-group">
-          <circle class="node" cx="460" cy="140" r="20" />
-          <text class="node-label" x="510" y="118" text-anchor="middle">MYSQL</text>
-        </g>
-        <g class="node-group">
-          <circle class="node" cx="140" cy="330" r="20" />
-          <text class="node-label" x="90" y="360" text-anchor="middle">C++ OOP</text>
-        </g>
-        <g class="node-group">
-          <circle class="node" cx="460" cy="330" r="20" />
-          <text class="node-label" x="510" y="360" text-anchor="middle">SQL</text>
-        </g>
-        <g class="node-group">
-          <circle class="node" cx="300" cy="420" r="20" />
-          <text class="node-label" x="300" y="450" text-anchor="middle">WEB</text>
-        </g>
-      </svg>
-    </div>
-  </section>
-
-  <!-- INTRO -->
-  <section class="section">
-    <p class="section__eyebrow">INTRO</p>
-    <p class="intro__text">I'm <strong>Malik Ali Raza</strong> — a B.S. Software Engineering student and Flutter &amp; Web Developer based in Sahiwal, Pakistan. I build real apps with clean architecture — Flutter, Dart, Python, Django, MySQL — with a user-first, detail-oriented approach shaped by front-office experience at Hotel One. Open to internships and freelance.</p>
-    <div class="intro__links">
-      <a class="view-detail" href="about.html" data-transition>More about me <span aria-hidden="true">→</span></a>
-      <a class="view-detail" href="skills.html" data-transition>My skills <span aria-hidden="true">→</span></a>
-    </div>
-  </section>
-
-  <!-- FEATURED PROJECTS -->
-  <section class="section">
-    <div class="teaser-head">
-      <div>
-        <p class="section__eyebrow" style="margin-bottom: 16px;">FEATURED PROJECTS</p>
-        <h2>Selected work</h2>
-      </div>
-      <a class="view-detail" href="projects.html" data-transition>View all projects <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="projects">
-      <article class="spec-card" data-detail="project-personal-finance.html">
-        <div class="spec-card__head">
-          <span class="tag">C++ APPLICATION</span>
-          <span class="spec-card__year">2025</span>
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__inner">
+        <p class="eyebrow">FLUTTER & WEB DEVELOPER — SAHIWAL, PAKISTAN</p>
+        <h1 class="hero__title">Malik&nbsp;Ali&nbsp;Raza</h1>
+        <p class="hero__sub">Flutter & Web Developer building real apps people actually use – clean architecture, responsive UIs, and solid foundations in Django, MySQL, and object-oriented C++ projects. Open to internships and freelance.</p>
+        <div class="hero__actions">
+          <a href="projects.html" class="btn btn--primary">View projects</a>
+          <a href="contact.html" class="btn btn--ghost">Get in touch</a>
         </div>
-        <h3>Personal Finance Manager</h3>
-        <p>Console finance tracker built on OOP – inheritance and polymorphism in action.</p>
-        <a class="view-detail" href="project-personal-finance.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-      <article class="spec-card" data-detail="project-bus-ticket.html">
-        <div class="spec-card__head">
-          <span class="tag">C++ APPLICATION</span>
-          <span class="spec-card__year">2024</span>
-        </div>
-        <h3>Bus Ticket Reservation System</h3>
-        <p>Menu-driven bus reservation system with separate Admin and Booking interfaces.</p>
-        <a class="view-detail" href="project-bus-ticket.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-      <article class="spec-card" data-detail="project-quiz-quest.html">
-        <div class="spec-card__head">
-          <span class="tag">PYTHON GAME</span>
-        </div>
-        <h3>Quiz Quest</h3>
-        <p>Terminal trivia – 16 questions, 3 rounds, lifelines, up to Rs. 150,000.</p>
-        <a class="view-detail" href="project-quiz-quest.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-    </div>
-  </section>
-
-  <!-- CALL TO ACTION -->
-  <section class="section">
-    <div class="cta-band">
-      <h2>Let's build something.</h2>
-      <p>Open to internships and freelance.</p>
-      <div class="hero__actions">
-        <a href="contact.html" class="btn btn--primary">Get in touch</a>
-        <a href="projects.html" class="btn btn--ghost">View projects</a>
       </div>
-    </div>
-  </section>
-</main>
+      <!-- Door-opening hero visual: a gold-framed doorway whose panels swing
+           open to reveal warm light, with skills emerging as neat, aligned chips. -->
+      <div class="doorway" aria-hidden="true">
+        <div class="doorway__portal">
+          <div class="doorway__glow"></div>
+          <div class="doorway__panel doorway__panel--left"></div>
+          <div class="doorway__panel doorway__panel--right"></div>
+          <div class="doorway__frame"></div>
+        </div>
+        <div class="doorway__step"></div>
+        <div class="doorway__groups">
+          <div class="doorway__group">
+            <span class="doorway__label">Mobile</span>
+            <div class="doorway__chips">
+              <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Clean Architecture</span>
+            </div>
+          </div>
+          <div class="doorway__group">
+            <span class="doorway__label">Languages</span>
+            <div class="doorway__chips">
+              <span class="chip">C++</span><span class="chip">Python</span>
+            </div>
+          </div>
+          <div class="doorway__group">
+            <span class="doorway__label">Web</span>
+            <div class="doorway__chips">
+              <span class="chip">Django</span><span class="chip">HTML &amp; CSS</span>
+            </div>
+          </div>
+          <div class="doorway__group">
+            <span class="doorway__label">Databases</span>
+            <div class="doorway__chips">
+              <span class="chip">MySQL</span><span class="chip">SQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer class="footer">
-  <p>Designed &amp; built by Malik Ali Raza · <span id="year"></span></p>
-</footer>
+  <footer class="footer">
+    <p>Designed & built by Malik Ali Raza · <span id="year"></span></p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
