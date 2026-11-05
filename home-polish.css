@@ -6,6 +6,8 @@
    slim gold-outlined menu rows on dark, with a gold
    hover/focus state, and dark preview cards with a thin
    gold border. The door sits 36px lower than before.
+   The six menu rows are sized to fit the card with room
+   to spare, so no scrollbar appears in the menu.
    These rules refine style.css for the home page only.
    ============================================================ */
 
@@ -81,11 +83,11 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 8px;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 14px;
+  padding: 10px;
   overflow: hidden;
   background: linear-gradient(180deg, #17130c, #0d0b08);
 }
@@ -100,7 +102,7 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 7px 14px;
+  padding: 6px 12px;
   border: 1px solid var(--gold-light);
   border-radius: 999px;
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
@@ -139,13 +141,13 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
   height: auto;
   min-height: 0;
-  padding: 16px;
+  padding: 12px;
   overflow-x: hidden;
   overflow-y: auto;
   background: #12100b;
@@ -157,6 +159,11 @@
 /* A hidden view must stay hidden, whatever display rules apply. */
 .door__view[hidden] {
   display: none;
+}
+
+/* The menu fits the card, so it never needs to scroll. */
+.door__view--menu {
+  overflow-y: hidden;
 }
 
 .door__menu-kicker {
@@ -173,7 +180,7 @@
 .door__view .door__menu {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -189,9 +196,9 @@
   justify-content: flex-start;
   width: 100%;
   max-width: 100%;
-  min-height: 34px;
+  min-height: 30px;
   margin: 0;
-  padding: 7px 12px;
+  padding: 5px 12px;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 13px;
   font-weight: 500;
@@ -366,7 +373,7 @@
   }
 
   .door__interior {
-    padding: 12px;
+    padding: 10px;
   }
 
   .door__view {
@@ -374,8 +381,8 @@
   }
 
   .door__view .door__menu-btn {
-    min-height: 32px;
-    padding: 6px 10px;
+    min-height: 30px;
+    padding: 5px 10px;
     font-size: 12px;
   }
 }
