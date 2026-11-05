@@ -1834,3 +1834,8 @@ body.page-contact main { flex: 1; display: flex; flex-direction: column; justify
   body.page-contact .page-head { padding-top: 96px; }
   body.page-contact .section--contact { padding-top: 24px; }
 }
+/* Refinements: home hero fits one viewport; contact links in one row on desktop */
+@media (min-width: 901px) {
+  body.page-home .hero { min-height: 0; }
+  body.page-contact .section--contact .contact__links { grid-template-columns: repeat(3, 1fr); max-width: 920px; }
+}
