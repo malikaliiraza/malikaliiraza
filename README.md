@@ -52,12 +52,13 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 | | |
 |---|---|
 | **Public repositories** | 5 |
+| **Contributions (last year)** | 370 — as of 5 Nov 2026 |
 | **Main languages** | C++, Python, CSS |
 | **Built projects** | Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
 
 <div align="center">
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=malikaliiraza&theme=tokyonight&hide_border=true)
+![GitHub Contributions](https://ghchart.rshah.org/malikaliiraza)
 
 </div>
 
