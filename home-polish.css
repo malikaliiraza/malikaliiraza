@@ -63,6 +63,20 @@
   display: none;
 }
 
+/* ---- Closed door: the interior must be completely hidden,
+   so no menu row or card edge can peek out from behind
+   the closed leaf. (The display:flex above must not
+   undo the base hiding of the interior.) ---- */
+.door[data-open="false"] .door__interior {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.door[data-open="true"] .door__interior {
+  visibility: visible;
+  opacity: 1;
+}
+
 .hero__badge-dot {
   display: none;
 }
