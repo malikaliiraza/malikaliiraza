@@ -118,3 +118,72 @@ document.querySelectorAll('.back-btn').forEach(btn => {
     window.location.href = fallback;
   });
 });
+
+// Interactive home door: the handle (or the door) swings the door open in
+// 3D to reveal warm light and the menu; menu options reveal compact
+// previews inside the same doorway. Keyboard-accessible, and with
+// prefers-reduced-motion the door opens instantly (no swing).
+(function () {
+  var door = document.querySelector('[data-door]');
+  if (!door) return;
+  var leaf = door.querySelector('[data-door-leaf]');
+  var handle = door.querySelector('[data-door-handle]');
+  var interior = door.querySelector('[data-door-interior]');
+  var views = Array.prototype.slice.call(door.querySelectorAll('[data-door-view]'));
+
+  function showView(name) {
+    views.forEach(function (view) {
+      view.hidden = view.getAttribute('data-door-view') !== name;
+    });
+  }
+
+  function openDoor() {
+    if (door.getAttribute('data-open') === 'true') return;
+    door.setAttribute('data-open', 'true');
+    showView('menu');
+    if (interior) {
+      interior.removeAttribute('inert');
+      interior.removeAttribute('aria-hidden');
+    }
+    var first = door.querySelector('[data-door-view="menu"] .door__menu-btn');
+    if (first) first.focus({ preventScroll: true });
+  }
+
+  function closeDoor() {
+    door.setAttribute('data-open', 'false');
+    showView('menu');
+    if (interior) {
+      interior.setAttribute('inert', '');
+      interior.setAttribute('aria-hidden', 'true');
+    }
+    if (handle) handle.focus({ preventScroll: true });
+  }
+
+  if (handle) handle.addEventListener('click', function (event) {
+    event.stopPropagation();
+    openDoor();
+  });
+
+  if (leaf) leaf.addEventListener('click', function () {
+    if (door.getAttribute('data-open') !== 'true') openDoor();
+  });
+
+  door.addEventListener('click', function (event) {
+    var previewBtn = event.target.closest('[data-door-preview]');
+    if (previewBtn) {
+      showView(previewBtn.getAttribute('data-door-preview'));
+      return;
+    }
+    var backBtn = event.target.closest('[data-door-back]');
+    if (backBtn) {
+      showView('menu');
+      return;
+    }
+    var closeBtn = event.target.closest('[data-door-close]');
+    if (closeBtn) closeDoor();
+  });
+
+  door.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && door.getAttribute('data-open') === 'true') closeDoor();
+  });
+})();
