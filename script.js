@@ -161,11 +161,11 @@ document.querySelectorAll('.back-btn').forEach(btn => {
 
   if (handle) handle.addEventListener('click', function (event) {
     event.stopPropagation();
-    openDoor();
+        if (door.getAttribute('data-open') === 'true') closeDoor(); else openDoor();
   });
 
   if (leaf) leaf.addEventListener('click', function () {
-    if (door.getAttribute('data-open') !== 'true') openDoor();
+    if (door.getAttribute('data-open') === 'true') closeDoor(); else openDoor();
   });
 
   door.addEventListener('click', function (event) {
@@ -183,7 +183,7 @@ document.querySelectorAll('.back-btn').forEach(btn => {
     if (closeBtn) closeDoor();
   });
 
-  door.addEventListener('keydown', function (event) {
+  document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape' && door.getAttribute('data-open') === 'true') closeDoor();
   });
 })();
