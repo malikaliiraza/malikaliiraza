@@ -321,7 +321,7 @@ ul { list-style: none; }
 }
 
 .door[data-open="true"] .door__leaf {
-  transform: rotateY(-104deg);
+  transform: rotateY(-88deg);
   cursor: default;
 }
 
