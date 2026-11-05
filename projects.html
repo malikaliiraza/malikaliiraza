@@ -1,154 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — Malik Ali Raza</title>
-<meta name="description" content="Projects built by Malik Ali Raza — web platforms, database systems, C++ applications, Python games and more.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Malik Ali Raza</title>
+  <meta name="description" content="Projects built by Malik Ali Raza — web platforms, database systems, C++ applications, Python games and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="gridfield" aria-hidden="true"></div>
 
-<div class="gridfield" aria-hidden="true"></div>
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__home">Home</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" aria-current="page">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav__home">Home</a>
-  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav__links" id="navLinks">
-    <li><a href="about.html">About</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a href="projects.html" aria-current="page">Projects</a></li>
-    <li><a href="experience.html">Experience</a></li>
-    <li><a href="certifications.html">Certifications</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <main>
+    <section class="page-head">
+      <p class="section__eyebrow">// 03 – PROJECTS</p>
+      <h1>Projects</h1>
+      <p class="page-head__lede">A selection of my work – from C++ console applications and Python games to database systems and full-stack web platforms.</p>
+    </section>
 
-<main>
-  <section class="page-head">
-    <p class="section__eyebrow">// 03 – PROJECTS</p>
-    <h1>Projects</h1>
-    <p class="page-head__lede">A selection of my work – from C++ console applications and Python games to database systems and full-stack web platforms.</p>
-  </section>
+    <!-- ON GITHUB -->
+    <section class="section">
+      <p class="section__eyebrow">// ON GITHUB</p>
+      <h2 class="proj-sec-title">Built &amp; on GitHub</h2>
+      <p class="proj-sec-lede">Finished work with public source — every card links straight to its repository.</p>
+      <div class="projects" style="margin-top: 28px;">
+        <article class="spec-card" data-detail="project-personal-finance.html">
+          <div class="spec-card__head">
+            <span class="tag">C++ APPLICATION</span>
+            <span class="spec-card__year">2025</span>
+          </div>
+          <h3>Personal Finance Manager</h3>
+          <p>Console finance tracker built on OOP – inheritance and polymorphism in action.</p>
+          <div class="stack">
+            <span>C++</span>
+            <span>OOP</span>
+          </div>
+          <div class="spec-card__links">
+            <a class="repo-link" href="https://github.com/malikaliiraza/Personal-Finance-Manager-System" target="_blank" rel="noopener">GitHub repo <span aria-hidden="true">↗</span></a>
+            <a class="view-detail" href="project-personal-finance.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="spec-card" data-detail="project-bus-ticket.html">
+          <div class="spec-card__head">
+            <span class="tag">C++ APPLICATION</span>
+            <span class="spec-card__year">2024</span>
+          </div>
+          <h3>Bus Ticket Reservation System</h3>
+          <p>Menu-driven bus reservation system with separate Admin and Booking interfaces.</p>
+          <div class="stack">
+            <span>C++</span>
+            <span>Structures</span>
+          </div>
+          <div class="spec-card__links">
+            <a class="repo-link" href="https://github.com/malikaliiraza/Bus-Ticket-Reservation-System" target="_blank" rel="noopener">GitHub repo <span aria-hidden="true">↗</span></a>
+            <a class="view-detail" href="project-bus-ticket.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="spec-card" data-detail="project-quiz-quest.html">
+          <div class="spec-card__head">
+            <span class="tag">PYTHON GAME</span>
+          </div>
+          <h3>Quiz Quest</h3>
+          <p>Terminal trivia – 16 questions, 3 rounds, lifelines, up to Rs. 150,000.</p>
+          <div class="stack">
+            <span>Python</span>
+          </div>
+          <div class="spec-card__links">
+            <a class="repo-link" href="https://github.com/malikaliiraza/Quiz-Quest" target="_blank" rel="noopener">GitHub repo <span aria-hidden="true">↗</span></a>
+            <a class="view-detail" href="project-quiz-quest.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="spec-card" data-detail="project-apex-dash.html">
+          <div class="spec-card__head">
+            <span class="tag">SCRATCH GAME</span>
+          </div>
+          <h3>Apex Dash</h3>
+          <p>Rhythm-based obstacle dodger in Scratch 3.0 – auto-scrolling play, real-time collision.</p>
+          <div class="stack">
+            <span>Scratch 3.0</span>
+            <span>Block-Based Programming</span>
+          </div>
+          <div class="spec-card__links">
+            <a class="repo-link" href="https://github.com/malikaliiraza/Apex-Dash" target="_blank" rel="noopener">GitHub repo <span aria-hidden="true">↗</span></a>
+            <a class="view-detail" href="project-apex-dash.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-  <section class="section">
-    <div class="projects">
+    <!-- IN DEVELOPMENT -->
+    <section class="section proj-sec--dev">
+      <p class="section__eyebrow">// IN DEVELOPMENT</p>
+      <h2 class="proj-sec-title">In Development</h2>
+      <p class="proj-sec-lede">Currently being built — repositories will be public when they are ready.</p>
+      <div class="projects" style="margin-top: 28px;">
+        <article class="spec-card spec-card--dev" data-detail="project-repair-recycle.html">
+          <div class="spec-card__head">
+            <span class="tag">WEB PLATFORM</span>
+            <span class="spec-card__year">2025</span>
+          </div>
+          <h3>Repair-or-Recycle Hub</h3>
+          <p>Full-stack marketplace connecting customers with verified technicians and recycling dealers.</p>
+          <div class="stack">
+            <span>Python</span>
+            <span>Django</span>
+            <span>PostgreSQL</span>
+          </div>
+          <p class="status"><span class="in-dev">In Development</span> — repo coming soon</p>
+          <a class="view-detail" href="project-repair-recycle.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="spec-card spec-card--dev" data-detail="project-ev-volttrack.html">
+          <div class="spec-card__head">
+            <span class="tag">DATABASE SYSTEM</span>
+            <span class="spec-card__year">2025</span>
+          </div>
+          <h3>EV VoltTrack</h3>
+          <p>Normalized 10-table MySQL schema managing EV charging operations end-to-end.</p>
+          <div class="stack">
+            <span>MySQL</span>
+            <span>Triggers</span>
+            <span>Stored Procedures</span>
+          </div>
+          <p class="status"><span class="in-dev">In Development</span> — repo coming soon</p>
+          <a class="view-detail" href="project-ev-volttrack.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-      <article class="spec-card" data-detail="project-repair-recycle.html">
-        <div class="spec-card__head">
-          <span class="tag">WEB PLATFORM</span>
-          <span class="spec-card__year">2025</span>
-        </div>
-        <h3>Repair-or-Recycle Hub</h3>
-        <p>Full-stack marketplace connecting customers with verified technicians and recycling dealers.</p>
-        <div class="stack">
-          <span>Python</span>
-          <span>Django</span>
-          <span>PostgreSQL</span>
-        </div>
-        <p class="status">Source – in development, repo coming soon</p>
-        <a class="view-detail" href="project-repair-recycle.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
+  <footer class="footer">
+    <p>Designed & built by Malik Ali Raza · <span id="year"></span></p>
+  </footer>
 
-      <article class="spec-card" data-detail="project-ev-volttrack.html">
-        <div class="spec-card__head">
-          <span class="tag">DATABASE SYSTEM</span>
-          <span class="spec-card__year">2025</span>
-        </div>
-        <h3>EV VoltTrack</h3>
-        <p>Normalized 10-table MySQL schema managing EV charging operations end-to-end.</p>
-        <div class="stack">
-          <span>MySQL</span>
-          <span>Triggers</span>
-          <span>Stored Procedures</span>
-        </div>
-        <p class="status">Source – in development, repo coming soon</p>
-        <a class="view-detail" href="project-ev-volttrack.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="spec-card" data-detail="project-personal-finance.html">
-        <div class="spec-card__head">
-          <span class="tag">C++ APPLICATION</span>
-          <span class="spec-card__year">2025</span>
-        </div>
-        <h3>Personal Finance Manager</h3>
-        <p>Console finance tracker built on OOP – inheritance and polymorphism in action.</p>
-        <div class="stack">
-          <span>C++</span>
-          <span>OOP</span>
-        </div>
-        <p class="status">
-          <a href="https://github.com/malikaliiraza/Personal-Finance-Manager-System" target="_blank" rel="noopener">Source – view repo on GitHub</a>
-        </p>
-        <a class="view-detail" href="project-personal-finance.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="spec-card" data-detail="project-bus-ticket.html">
-        <div class="spec-card__head">
-          <span class="tag">C++ APPLICATION</span>
-          <span class="spec-card__year">2024</span>
-        </div>
-        <h3>Bus Ticket Reservation System</h3>
-        <p>Menu-driven bus reservation system with separate Admin and Booking interfaces.</p>
-        <div class="stack">
-          <span>C++</span>
-          <span>Structures</span>
-        </div>
-        <p class="status">
-          <a href="https://github.com/malikaliiraza/Bus-Ticket-Reservation-System" target="_blank" rel="noopener">Source – view repo on GitHub</a>
-        </p>
-        <a class="view-detail" href="project-bus-ticket.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="spec-card" data-detail="project-quiz-quest.html">
-        <div class="spec-card__head">
-          <span class="tag">PYTHON GAME</span>
-        </div>
-        <h3>Quiz Quest</h3>
-        <p>Terminal trivia – 16 questions, 3 rounds, lifelines, up to Rs. 150,000.</p>
-        <div class="stack">
-          <span>Python</span>
-        </div>
-        <p class="status">
-          <a href="https://github.com/malikaliiraza/Quiz-Quest" target="_blank" rel="noopener">Source – view repo on GitHub</a>
-        </p>
-        <a class="view-detail" href="project-quiz-quest.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="spec-card" data-detail="project-apex-dash.html">
-        <div class="spec-card__head">
-          <span class="tag">SCRATCH GAME</span>
-        </div>
-        <h3>Apex Dash</h3>
-        <p>Rhythm-based obstacle dodger in Scratch 3.0 – auto-scrolling play, real-time collision.</p>
-        <div class="stack">
-          <span>Scratch 3.0</span>
-          <span>Block-Based Programming</span>
-        </div>
-        <p class="status">
-          <a href="https://github.com/malikaliiraza/Apex-Dash" target="_blank" rel="noopener">Source – view repo on GitHub</a>
-        </p>
-        <a class="view-detail" href="project-apex-dash.html" data-transition>View Detail <span aria-hidden="true">→</span></a>
-      </article>
-
-    </div>
-
-    <div class="page-cta">
-      <a href="contact.html" class="btn btn--primary">Get in touch</a>
-      <a href="skills.html" class="btn btn--ghost">View skills</a>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <p>Designed &amp; built by Malik Ali Raza · <span id="year"></span></p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
