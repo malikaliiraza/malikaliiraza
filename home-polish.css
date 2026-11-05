@@ -1,15 +1,19 @@
 /* ============================================================
    HOME POLISH — Royal Luxury
    Home hero balance, the "Open to internships & freelance"
-   badge, a warm glow behind the door, and a golden-lit door
-   interior with a prominent gold close button.
+   badge (no dot or decoration over the text), a calm warm
+   glow behind the door, and a dark elegant door interior:
+   slim gold-outlined menu rows on dark, with a gold
+   hover/focus state, and dark preview cards with a thin
+   gold border. The door sits 36px lower than before.
    These rules refine style.css for the home page only.
    ============================================================ */
 
-/* ---- Hero: door centred, soft warm glow behind it ---- */
+/* ---- Hero: door centred, lowered, calm warm glow ---- */
 .hero .door {
   justify-self: center;
   position: relative;
+  margin-top: 36px;
 }
 
 .hero .door::before {
@@ -18,7 +22,7 @@
   inset: -10% -16%;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(closest-side, rgba(245, 214, 123, 0.30), rgba(212, 175, 55, 0.12) 55%, rgba(212, 175, 55, 0) 78%);
+  background: radial-gradient(closest-side, rgba(245, 214, 123, 0.14), rgba(212, 175, 55, 0.06) 55%, rgba(212, 175, 55, 0) 78%);
 }
 
 /* ---- Hero divider and badge ---- */
@@ -29,12 +33,16 @@
   background: linear-gradient(90deg, var(--gold-light), var(--gold) 55%, rgba(212, 175, 55, 0));
 }
 
+/* Badge text only: the gold dot span was removed from index.html
+   because it sat on top of the first letter. No dot, icon or
+   pseudo-element may overlap the badge text. */
 .hero__badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 0;
   margin: 0 0 20px;
-  padding: 7px 14px;
+  padding: 8px 16px;
   border: 1px solid var(--gold-line);
   border-radius: 999px;
   background: var(--gold-faint);
@@ -47,13 +55,14 @@
   white-space: nowrap;
 }
 
+.hero__badge::before,
+.hero__badge::after {
+  content: none;
+  display: none;
+}
+
 .hero__badge-dot {
-  flex: none;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 0 10px var(--gold-glow);
+  display: none;
 }
 
 .hero__sub {
@@ -66,20 +75,27 @@
   animation-delay: 0.5s;
 }
 
-/* ---- Door interior: a warm golden-lit room, with the menu and
-   previews as a gold-framed card ---- */
+/* ---- Door interior: dark, calm, premium ---- */
 .door__interior {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  gap: 8px;
-  padding: 10px;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #17130c, #0d0b08);
 }
 
+/* The single close control: the prominent gold pill at the top. */
 .door__close-top {
   flex: 0 0 auto;
   align-self: center;
+  box-sizing: border-box;
+  max-width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -112,16 +128,30 @@
   outline-offset: 3px;
 }
 
-/* The gold-framed preview card inside the golden-lit interior. */
+/* The duplicate bottom close link was removed from index.html;
+   hide it here too, so only the top pill can ever appear. */
+.door__close {
+  display: none;
+}
+
+/* Dark preview card with a thin gold border, inside the interior. */
 .door__view {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   min-height: 0;
-  gap: 10px;
-  background: linear-gradient(165deg, rgba(22, 15, 5, 0.78), rgba(10, 7, 3, 0.85));
-  border: 1px solid rgba(212, 175, 55, 0.55);
+  padding: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #12100b;
+  border: 1px solid rgba(212, 175, 55, 0.32);
   border-radius: 10px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(245, 214, 123, 0.18);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
 }
 
 /* A hidden view must stay hidden, whatever display rules apply. */
@@ -130,34 +160,191 @@
 }
 
 .door__menu-kicker {
+  margin: 0;
+  color: var(--gold-light);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* ---- Menu: ONE vertical list of six slim rows, in order,
+   each full-width inside the card, never overflowing it. ---- */
+.door__view .door__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.door__view .door__menu-btn {
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-height: 34px;
+  margin: 0;
+  padding: 7px 12px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #f0e3b2;
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  border-radius: 8px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.door__view .door__menu-btn::after {
+  content: "\2192";
+  margin-left: auto;
+  padding-left: 12px;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.door__view .door__menu-btn:hover,
+.door__view .door__menu-btn:focus-visible {
+  background: rgba(212, 175, 55, 0.14);
+  color: #fff3c4;
+  border-color: var(--gold-light);
+  box-shadow: 0 0 0 1px rgba(245, 214, 123, 0.25), 0 4px 12px rgba(0, 0, 0, 0.35);
+  transform: none;
+}
+
+.door__view .door__menu-btn:focus-visible {
+  outline: 2px solid #fff3c4;
+  outline-offset: 2px;
+}
+
+/* ---- Previews, restyled to match the dark interior ---- */
+.door__back {
+  align-self: flex-start;
+  padding: 5px 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--gold-light);
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.door__back:hover,
+.door__back:focus-visible {
+  background: rgba(212, 175, 55, 0.14);
+  color: #fff3c4;
+}
+
+.door__preview-title {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 19px;
+  font-weight: 700;
   color: var(--gold-light);
 }
 
-.door__menu {
-  gap: 10px;
-}
-
-.door__menu-btn {
-  padding: 10px 8px;
-  color: #221a05;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  border: 1px solid var(--gold-light);
-  border-radius: 999px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.door__menu-btn:hover,
-.door__menu-btn:focus-visible {
-  background: linear-gradient(135deg, #ffedb0, var(--gold-light));
-  color: #221a05;
-  border-color: #ffedb0;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 16px var(--gold-glow);
+.door__preview-text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #e6dcc2;
 }
 
 .door__chip-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.door__chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.door__chip-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.door__chip {
+  padding: 3px 8px;
+  font-size: 11px;
+  color: #f0e3b2;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
+}
+
+.door__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
   gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.door__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.door__list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.door__list strong {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f5ead0;
+}
+
+.door__list span {
+  font-size: 12px;
+  line-height: 1.45;
+  color: #cbbf9e;
+}
+
+.door__mini-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.door__mini-links a {
+  font-size: 12px;
+  color: #f0e3b2;
+  overflow-wrap: anywhere;
+}
+
+.door__full {
+  font-size: 12px;
+  color: var(--gold-light);
 }
 
 /* The open leaf now closes the door, so it reads as clickable. */
@@ -165,11 +352,39 @@
   cursor: pointer;
 }
 
+/* ---- Narrower widths: door a little lower, rows slimmer,
+   badge may wrap instead of overflowing. ---- */
+@media (max-width: 900px) {
+  .hero .door {
+    margin-top: 20px;
+  }
+
+  .hero__badge {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  .door__interior {
+    padding: 12px;
+  }
+
+  .door__view {
+    padding: 12px;
+  }
+
+  .door__view .door__menu-btn {
+    min-height: 32px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
 /* ---- Reduced motion: the door already opens instantly; keep
    the new buttons still too. ---- */
 @media (prefers-reduced-motion: reduce) {
   .door__close-top,
-  .door__menu-btn {
+  .door__view .door__menu-btn {
     transition: none;
   }
 }
