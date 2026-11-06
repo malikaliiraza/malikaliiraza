@@ -23,7 +23,7 @@
 | **Strongest base** | OOP and problem solving — real projects in C++ and Python, not just tutorials |
 | **Current focus** | Flutter, Clean Architecture, REST APIs, Firebase — industry-ready mobile development |
 | **Best built project** | Personal Finance Manager — abstract classes, polymorphism, reports, 116 commits |
-| **Next level** | Four future projects below — each with an AI, offline, or predictive feature |
+| **Next level** | CashWise AI in progress, three future projects below — each with an AI, offline, or predictive feature |
 | **Contact** | Portfolio and LinkedIn above |
 
 Focus: uncommon projects, or common projects with a future feature that makes them different.
@@ -51,10 +51,10 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 | | |
 |---|---|
-| **Public repositories** | 5 |
-| **Contributions (last year)** | 370 — as of 5 Nov 2026 |
+| **Public repositories** | 6 |
+| **Contributions (last year)** | 387 — as of 6 Nov 2026 |
 | **Main languages** | C++, Python, CSS |
-| **Built projects** | Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
+| **Built projects** | CashWise AI, Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
 
 ---
 
@@ -74,6 +74,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 | Project | What it is | Stack | Status |
 |---|---|---|---|
+| **CashWise AI** | Pakistan-first finance coach — PKR budget, offline-first expenses, Urdu/English overspend alerts | Flutter · Dart | In progress — MVP v1 — [Repo](https://github.com/malikaliiraza/CashWise-AI) |
 | **Personal Finance Manager** | OOP finance app — balance, categories, reminders, reports | C++ | Complete — [Repo](https://github.com/malikaliiraza/Personal-Finance-Manager-System) |
 | **Bus Ticket Reservation** | Admin + booking, live seat map, role-based discounts | C++ | Complete — [Repo](https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-) |
 | **Quiz Quest** | Terminal trivia — 16 questions, 3 rounds, lifelines | Python | Complete — [Repo](https://github.com/malikaliiraza/Quiz-Quest) |
@@ -102,32 +103,18 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 ## Future Projects — Roadmap
 
-### 1. CashWise AI — Pakistan-first Finance Coach
-**Not just another expense tracker.**
-- PKR budgets, categories, and charts — offline-first Flutter app
-- Receipt scan (OCR) for automatic entry
-- **AI Cash-Flow Predictor:** Predicts, before the month ends, when money will run out, warns before overspending, in Urdu and English
-
-```mermaid
-flowchart LR
-    A[Receipt / Manual Entry] --> B[Flutter App - Offline First]
-    B --> C[Local DB + Firebase Sync]
-    C --> D[AI Cash-Flow Predictor]
-    D --> E[Urdu / English Alert: Overspend Warning]
-```
-
-### 2. SafeRide Campus — University Bus Safety + Booking
+### 1. SafeRide Campus — University Bus Safety + Booking
 **Not just seat booking.**
 - Live bus location, seat booking, offline QR ticket
 - **AI Delay Predictor + Safety Alerts:** Predicts delays from route, traffic, and past data, and sends safe-arrival alerts to parents. Built as a niche solution for Pakistani universities
 
-### 3. LearnLoop AI — Quizzes From Your Own Notes
+### 2. LearnLoop AI — Quizzes From Your Own Notes
 **Not just another quiz app.**
 - Upload a PDF or notes, AI generates a quiz from them
 - Spaced repetition and weak-topic analytics
 - **AI Tutor:** On a wrong answer, it does not just say "wrong" — it re-explains the concept in simple Urdu or English
 
-### 4. CropDoctor Offline — On-Device AI for Farmers
+### 3. CropDoctor Offline — On-Device AI for Farmers
 **Not just an information app.**
 - Phone camera detects crop disease — offline, with on-device AI
 - Urdu voice guidance: what the problem is, and what to do about it
