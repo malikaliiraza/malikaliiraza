@@ -2266,3 +2266,24 @@ a.cat-card:hover, .proj-mini:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5),
   .nav__links a { display: block; padding: 10px 6px; font-size: 12.5px; letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   :root { --gold-glow: rgba(212, 175, 55, 0.07); }
 }
+
+
+/* ============================================
+   MENU SCREEN — Step Inside (menu.html)
+   Six large glass cards, not the door's slim rows
+============================================ */
+.menu-section { max-width: var(--maxw); margin: 0 auto; padding: 0 20px 80px; }
+.menu-actions { margin-bottom: 24px; }
+.menu-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.menu-card { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-height: 180px; padding: 28px 24px; text-align: left; font-family: var(--font-body); color: var(--text-primary); background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(20,20,27,0.55)); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 10px 24px rgba(0,0,0,0.45); backdrop-filter: blur(6px); cursor: pointer; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+.menu-card:hover, .menu-card:focus-visible { transform: translateY(-3px); border-color: var(--gold-line); box-shadow: 0 14px 28px rgba(0,0,0,0.5), 0 0 12px var(--gold-glow); outline: none; }
+.menu-card[aria-expanded="true"] { border-color: var(--gold-line); box-shadow: 0 0 12px var(--gold-glow); }
+.menu-card__title { font-family: var(--font-display); font-size: 1.65rem; font-weight: 600; color: var(--gold-light); }
+.menu-card__desc { color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6; }
+.menu-card__arrow { margin-top: auto; align-self: flex-end; font-family: var(--font-mono); color: var(--gold); font-size: 1.15rem; }
+.menu-detail { margin-top: 28px; padding: 28px; border: 1px solid var(--border); border-radius: 16px; background: rgba(20,20,27,0.6); box-shadow: 0 10px 24px rgba(0,0,0,0.45); }
+.menu-detail[hidden], .menu-detail__view[hidden] { display: none; }
+.menu-detail .door__back { margin-bottom: 16px; }
+.menu-detail .door__preview-title { font-size: 1.7rem; margin-bottom: 12px; }
+@media (max-width: 900px) { .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .menu-grid { grid-template-columns: 1fr; } .menu-card { min-height: 0; } .menu-detail { padding: 22px 18px; } }
