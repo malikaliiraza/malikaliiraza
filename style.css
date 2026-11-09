@@ -8,9 +8,9 @@
   --gold: #d4af37;
   --gold-light: #f5d67b;
   --gold-deep: #8f6f1d;
-  --gold-glow: rgba(212, 175, 55, 0.22);
+  --gold-glow: rgba(212, 175, 55, 0.10);
   --gold-line: rgba(212, 175, 55, 0.38);
-  --gold-faint: rgba(212, 175, 55, 0.12);
+  --gold-faint: rgba(212, 175, 55, 0.06);
   --text-primary: #f7f2e4;
   --text-secondary: #d6cbae;
   --text-dim: #a39a80;
@@ -2244,4 +2244,25 @@ body.page-contact main { flex: 1; display: flex; flex-direction: column; justify
 @media (min-width: 901px) {
   body.page-home .hero { min-height: 0; }
   body.page-contact .section--contact .contact__links { grid-template-columns: repeat(3, 1fr); max-width: 920px; }
+}
+
+/* Mobile menu + calmer gold glow (Nov 2026): keep the Royal Luxury gold, soften the wash. */
+.nav__toggle span:nth-child(n+4) { display: none; }
+.doorway__glow {
+  background: radial-gradient(ellipse 70% 55% at 50% 62%, rgba(245, 214, 123, 0.45) 0%, rgba(212, 175, 55, 0.20) 42%, rgba(24, 19, 10, 0.94) 78%);
+  opacity: 0.45;
+  inset: 18px;
+}
+.doorway__frame { box-shadow: 0 0 12px var(--gold-glow), inset 0 0 8px rgba(212, 175, 55, 0.08); }
+.btn--primary:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), 0 0 10px var(--gold-glow); }
+.spec-card:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 12px var(--gold-glow); }
+.skill-card:hover, .contact__link:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 12px var(--gold-glow); }
+a.cat-card:hover, .proj-mini:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5), 0 0 12px var(--gold-glow); }
+@media (max-width: 720px) {
+  .nav__links { position: fixed; top: 68px; left: 0; right: 0; transform: none; max-width: none; }
+  .nav__links.is-open, .nav__links.open { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 10px; padding: 12px 16px; max-height: 460px; align-items: stretch; }
+  .nav__links li { width: auto; max-width: none; padding: 0; border-bottom: none; text-align: center; line-height: 1.2; }
+  .nav__links li:last-child { border-bottom: none; }
+  .nav__links a { display: block; padding: 10px 6px; font-size: 12.5px; letter-spacing: .08em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  :root { --gold-glow: rgba(212, 175, 55, 0.07); }
 }
