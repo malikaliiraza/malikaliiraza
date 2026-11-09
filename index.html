@@ -10,6 +10,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="home-polish.css">
+  <style>
+    /* Door interior (index.html): a single centred Welcome while the door swings open. */
+    .door__interior {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .door__welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    .door__welcome-word {
+      margin: 0;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      color: var(--gold);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-deep));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .door__welcome-divider {
+      display: block;
+      width: min(140px, 50%);
+      height: 1px;
+      margin-top: 0.85rem;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+  </style>
 </head>
 <body class="page-home">
   <div class="gridfield"></div>
@@ -41,75 +76,14 @@
           <a href="contact.html" class="btn btn--ghost">Get in touch</a>
         </div>
       </div>
-      <!-- Interactive door: a real walnut-and-brass door. The handle swings it open in 3D to reveal the menu and compact previews inside the doorway. -->
+      <!-- Interactive door: a real walnut-and-brass door. The handle swings it open in 3D to reveal a warm Welcome inside the doorway. -->
       <div class="door" data-door data-open="false">
         <div class="door__frame">
           <div class="door__interior" data-door-interior inert aria-hidden="true">
-            <button type="button" class="door__close-top" data-door-close aria-label="Close the door">✕ Close the Door</button>
-            <div class="door__view door__view--menu" data-door-view="menu">
-              <p class="door__menu-kicker">Step inside</p>
-              <div class="door__menu">
-                <button type="button" class="door__menu-btn" data-door-preview="about">About</button>
-                <button type="button" class="door__menu-btn" data-door-preview="skills">Skills</button>
-                <button type="button" class="door__menu-btn" data-door-preview="projects">Projects</button>
-                <button type="button" class="door__menu-btn" data-door-preview="experience">Experience</button>
-                <button type="button" class="door__menu-btn" data-door-preview="certifications">Certifications</button>
-                <button type="button" class="door__menu-btn" data-door-preview="contact">Contact</button>
-              </div>
-                    </div>
-            <section class="door__view" data-door-view="about" hidden>
-              <button type="button" class="door__back" data-door-back>← Menu</button>
-              <h3 class="door__preview-title">About</h3>
-              <p class="door__preview-text">Flutter &amp; Web Developer with a Clean Architecture focus — building real apps people actually use. B.S. Software Engineering student at Riphah, based in Sahiwal, Pakistan.</p>
-              <a class="door__full" href="about.html">Open full page →</a>
-            </section>
-            <section class="door__view" data-door-view="skills" hidden>
-              <button type="button" class="door__back" data-door-back>← Menu</button>
-              <h3 class="door__preview-title">Skills</h3>
-              <div class="door__chip-groups">
-                <div class="door__chip-group"><span class="door__chip-label">Mobile</span><span class="door__chip">Flutter</span><span class="door__chip">Dart</span><span class="door__chip">Clean Architecture</span></div>
-                <div class="door__chip-group"><span class="door__chip-label">Languages</span><span class="door__chip">C++</span><span class="door__chip">Python</span></div>
-                <div class="door__chip-group"><span class="door__chip-label">Web</span><span class="door__chip">Django</span><span class="door__chip">HTML &amp; CSS</span></div>
-                <div class="door__chip-group"><span class="door__chip-label">Databases</span><span class="door__chip">MySQL</span><span class="door__chip">SQL</span></div>
-              </div>
-              <a class="door__full" href="skills.html">Open full Skills page →</a>
-            </section>
-            <section class="door__view" data-door-view="projects" hidden>
-              <button type="button" class="door__back" data-door-back>← Menu</button>
-              <h3 class="door__preview-title">Projects</h3>
-              <ul class="door__list">
-                <li><strong>Personal Finance Manager</strong><span>OOP finance tracker &mdash; C++</span></li>
-                <li><strong>Bus Ticket Reservation System</strong><span>Booking &amp; live seat map &mdash; C++</span></li>
-                <li><strong>Quiz Quest</strong><span>Terminal trivia, 16 questions &mdash; Python</span></li>
-                <li><strong>Apex Dash</strong><span>Rhythm obstacle game &mdash; Scratch 3.0</span></li>
-              </ul>
-              <a class="door__full" href="projects.html">Open full page →</a>
-            </section>
-            <section class="door__view" data-door-view="experience" hidden>
-              <button type="button" class="door__back" data-door-back>← Menu</button>
-              <h3 class="door__preview-title">Experience</h3>
-              <ul class="door__list">
-                <li><strong>Front Office Intern</strong><span>3-month internship &mdash; Hotel One by Pearl Continental, Sahiwal</span></li>
-                <li><strong>B.S. Software Engineering</strong><span>In progress, expected 2028 &mdash; Riphah International University, Sahiwal</span></li>
-              </ul>
-              <a class="door__full" href="experience.html">Open full page →</a>
-            </section>
-            <section class="door__view" data-door-view="certifications" hidden>
-              <button type="button" class="door__back" data-door-back>← Menu</button>
-              <h3 class="door__preview-title">Certifications</h3>
-              <p class="door__preview-text"><strong>Tech Connect 2026</strong> — Certificate of Participation, organised by GDG Live Pakistan with Riphah International University, Sahiwal · 2 October 2026.</p>
-              <a class="door__full" href="certifications.html">Open full page →</a>
-            </section>
-            <section class="door__view" data-door-view="contact" hidden>
-              <button type="button" class="door__back" data-door-back>← Menu</button>
-              <h3 class="door__preview-title">Contact</h3>
-              <div class="door__mini-links">
-                <a href="mailto:melicaliyraza5@gmail.com">Email</a>
-                <a href="https://www.linkedin.com/in/malikaliraza/">linkedin.com/in/malikaliraza</a>
-                <a href="https://github.com/malikaliiraza">github.com/malikaliiraza</a>
-              </div>
-              <a class="door__full" href="contact.html">Open full page →</a>
-            </section>
+            <div class="door__welcome">
+              <p class="door__welcome-word">Welcome</p>
+              <span class="door__welcome-divider" aria-hidden="true"></span>
+            </div>
           </div>
           <div class="door__leaf" data-door-leaf>
             <div class="door__wood">
