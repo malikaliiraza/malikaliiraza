@@ -196,7 +196,7 @@ document.querySelectorAll('.back-btn').forEach(btn => {
 // door's Close button cancels the pending move, and returning to Home
 // via the browser Back button (bfcache) restores the door closed.
 (function () {
-  const door = document.getElementById('door');
+  const door = document.querySelector('[data-door]');
   if (!door) return;
   let menuTimer = null;
   function scheduleMenu() {
