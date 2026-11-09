@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Step Inside — Malik Ali Raza</title>
+<meta name="description" content="Step inside Malik Ali Raza's portfolio — About, Skills, Projects, Experience, Certifications and Contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-menu">
+
+<div class="gridfield" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__home">Home</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="page-head">
+    <h1>Step Inside</h1>
+    <p class="page-head__lede">Choose where to go next.</p>
+  </section>
+
+  <section class="section menu-section">
+    <div class="menu-actions">
+      <button type="button" class="btn btn--ghost back-btn" data-fallback="index.html">&larr; Back to Home</button>
+    </div>
+
+    <div class="menu-grid" data-menu-grid>
+      <button type="button" class="menu-card" data-menu-card="about" aria-expanded="false" aria-controls="menu-detail-about">
+        <span class="menu-card__title">About</span>
+        <span class="menu-card__desc">Flutter &amp; Web Developer with a Clean Architecture focus.</span>
+        <span class="menu-card__arrow" aria-hidden="true">&rarr;</span>
+      </button>
+      <button type="button" class="menu-card" data-menu-card="skills" aria-expanded="false" aria-controls="menu-detail-skills">
+        <span class="menu-card__title">Skills</span>
+        <span class="menu-card__desc">Flutter, Dart, Clean Architecture, C++, Python, Django and more.</span>
+        <span class="menu-card__arrow" aria-hidden="true">&rarr;</span>
+      </button>
+      <button type="button" class="menu-card" data-menu-card="projects" aria-expanded="false" aria-controls="menu-detail-projects">
+        <span class="menu-card__title">Projects</span>
+        <span class="menu-card__desc">Four built projects, from finance to games.</span>
+        <span class="menu-card__arrow" aria-hidden="true">&rarr;</span>
+      </button>
+      <button type="button" class="menu-card" data-menu-card="experience" aria-expanded="false" aria-controls="menu-detail-experience">
+        <span class="menu-card__title">Experience</span>
+        <span class="menu-card__desc">Front Office internship and B.S. Software Engineering in progress.</span>
+        <span class="menu-card__arrow" aria-hidden="true">&rarr;</span>
+      </button>
+      <button type="button" class="menu-card" data-menu-card="certifications" aria-expanded="false" aria-controls="menu-detail-certifications">
+        <span class="menu-card__title">Certifications</span>
+        <span class="menu-card__desc">Tech Connect 2026 Certificate of Participation.</span>
+        <span class="menu-card__arrow" aria-hidden="true">&rarr;</span>
+      </button>
+      <button type="button" class="menu-card" data-menu-card="contact" aria-expanded="false" aria-controls="menu-detail-contact">
+        <span class="menu-card__title">Contact</span>
+        <span class="menu-card__desc">Email, LinkedIn and GitHub.</span>
+        <span class="menu-card__arrow" aria-hidden="true">&rarr;</span>
+      </button>
+    </div>
+
+    <section class="menu-detail" id="menuDetail" hidden aria-live="polite">
+      <button type="button" class="door__back" data-menu-back>&larr; Back to menu</button>
+
+      <section class="menu-detail__view" id="menu-detail-about" data-menu-detail="about" hidden>
+        <h3 class="door__preview-title">About</h3>
+        <p class="door__preview-text">Flutter &amp; Web Developer with a Clean Architecture focus &mdash; building real apps people actually use. B.S. Software Engineering student at Riphah, based in Sahiwal, Pakistan.</p>
+        <a class="door__full" href="about.html">Open full page &rarr;</a>
+      </section>
+
+      <section class="menu-detail__view" id="menu-detail-skills" data-menu-detail="skills" hidden>
+        <h3 class="door__preview-title">Skills</h3>
+        <div class="door__chip-groups">
+          <div class="door__chip-group"><span class="door__chip-label">Mobile</span><span class="door__chip">Flutter</span><span class="door__chip">Dart</span><span class="door__chip">Clean Architecture</span></div>
+          <div class="door__chip-group"><span class="door__chip-label">Languages</span><span class="door__chip">C++</span><span class="door__chip">Python</span></div>
+          <div class="door__chip-group"><span class="door__chip-label">Web</span><span class="door__chip">Django</span><span class="door__chip">HTML &amp; CSS</span></div>
+          <div class="door__chip-group"><span class="door__chip-label">Databases</span><span class="door__chip">MySQL</span><span class="door__chip">SQL</span></div>
+        </div>
+        <a class="door__full" href="skills.html">Open full Skills page &rarr;</a>
+      </section>
+
+      <section class="menu-detail__view" id="menu-detail-projects" data-menu-detail="projects" hidden>
+        <h3 class="door__preview-title">Projects</h3>
+        <ul class="door__list">
+          <li><strong>Personal Finance Manager</strong><span>OOP finance tracker &mdash; C++</span></li>
+          <li><strong>Bus Ticket Reservation System</strong><span>Booking &amp; live seat map &mdash; C++</span></li>
+          <li><strong>Quiz Quest</strong><span>Terminal trivia, 16 questions &mdash; Python</span></li>
+          <li><strong>Apex Dash</strong><span>Rhythm obstacle game &mdash; Scratch 3.0</span></li>
+        </ul>
+        <a class="door__full" href="projects.html">Open full page &rarr;</a>
+      </section>
+
+      <section class="menu-detail__view" id="menu-detail-experience" data-menu-detail="experience" hidden>
+        <h3 class="door__preview-title">Experience</h3>
+        <ul class="door__list">
+          <li><strong>Front Office Intern</strong><span>3-month internship &mdash; Hotel One by Pearl Continental, Sahiwal</span></li>
+          <li><strong>B.S. Software Engineering</strong><span>In progress, expected 2028 &mdash; Riphah International University, Sahiwal</span></li>
+        </ul>
+        <a class="door__full" href="experience.html">Open full page &rarr;</a>
+      </section>
+
+      <section class="menu-detail__view" id="menu-detail-certifications" data-menu-detail="certifications" hidden>
+        <h3 class="door__preview-title">Certifications</h3>
+        <p class="door__preview-text"><strong>Tech Connect 2026</strong> &mdash; Certificate of Participation, organised by GDG Live Pakistan with Riphah International University, Sahiwal &middot; 2 October 2026.</p>
+        <a class="door__full" href="certifications.html">Open full page &rarr;</a>
+      </section>
+
+      <section class="menu-detail__view" id="menu-detail-contact" data-menu-detail="contact" hidden>
+        <h3 class="door__preview-title">Contact</h3>
+        <div class="door__mini-links">
+          <a href="mailto:melicaliyraza5@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/malikaliraza/">linkedin.com/in/malikaliraza</a>
+          <a href="https://github.com/malikaliiraza">github.com/malikaliiraza</a>
+        </div>
+        <a class="door__full" href="contact.html">Open full page &rarr;</a>
+      </section>
+    </section>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Malik Ali Raza &middot; <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
