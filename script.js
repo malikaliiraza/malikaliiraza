@@ -187,3 +187,92 @@ document.querySelectorAll('.back-btn').forEach(btn => {
     if (event.key === 'Escape' && door.getAttribute('data-open') === 'true') closeDoor();
   });
 })();
+
+// DOOR NOW OPENS THE MENU SCREEN (Nov 2026)
+// The door's own toggle above still swings the walnut leaf open in 3D.
+// This listener schedules the move to menu.html shortly after the swing
+// starts, using the site's normal page transition (goTo). With
+// prefers-reduced-motion, goTo goes straight to menu.html. Escape or the
+// door's Close button cancels the pending move, and returning to Home
+// via the browser Back button (bfcache) restores the door closed.
+(function () {
+  const door = document.getElementById('door');
+  if (!door) return;
+  let menuTimer = null;
+  function scheduleMenu() {
+    if (menuTimer) return;
+    menuTimer = window.setTimeout(function () {
+      menuTimer = null;
+      goTo('menu.html');
+    }, 750);
+  }
+  function cancelMenu() {
+    if (menuTimer) { window.clearTimeout(menuTimer); menuTimer = null; }
+  }
+  door.addEventListener('click', function (event) {
+    const target = event.target;
+    if (!target.closest) return;
+    if (target.closest('.door__close')) { cancelMenu(); return; }
+    if (target.closest('.door__handle') || target.closest('.door__leaf')) scheduleMenu();
+  }, true);
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') cancelMenu();
+  });
+  window.addEventListener('pageshow', function (event) {
+    if (!event.persisted) return;
+    cancelMenu();
+    door.setAttribute('data-open', 'false');
+    const handle = door.querySelector('.door__handle');
+    if (handle) handle.setAttribute('aria-expanded', 'false');
+    const interior = door.querySelector('.door__interior');
+    if (interior) interior.removeAttribute('inert');
+    door.querySelectorAll('.door__view').forEach(function (view) {
+      view.hidden = view.getAttribute('data-door-view') !== 'menu';
+    });
+  });
+})();
+
+// MENU SCREEN (menu.html) — six cards, one detail panel below the grid.
+// The detail content is the same content the door used to show, unchanged.
+(function () {
+  const grid = document.querySelector('[data-menu-grid]');
+  if (!grid) return;
+  const detail = document.getElementById('menuDetail');
+  if (!detail) return;
+  const cards = Array.prototype.slice.call(grid.querySelectorAll('[data-menu-card]'));
+  const views = Array.prototype.slice.call(detail.querySelectorAll('[data-menu-detail]'));
+  const backBtn = detail.querySelector('[data-menu-back]');
+  let lastCard = null;
+  function show(name, scrollToDetail) {
+    const view = detail.querySelector('[data-menu-detail="' + name + '"]');
+    if (!view) return;
+    lastCard = grid.querySelector('[data-menu-card="' + name + '"]');
+    cards.forEach(function (card) {
+      card.setAttribute('aria-expanded', card === lastCard ? 'true' : 'false');
+    });
+    views.forEach(function (v) { v.hidden = v !== view; });
+    detail.hidden = false;
+    try { history.replaceState(null, '', '#' + name); } catch (e) {}
+    if (scrollToDetail) {
+      detail.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
+    }
+  }
+  function hide() {
+    detail.hidden = true;
+    views.forEach(function (v) { v.hidden = true; });
+    cards.forEach(function (card) { card.setAttribute('aria-expanded', 'false'); });
+    try { history.replaceState(null, '', window.location.pathname); } catch (e) {}
+    if (lastCard) lastCard.focus();
+  }
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      show(card.getAttribute('data-menu-card'), true);
+    });
+  });
+  if (backBtn) backBtn.addEventListener('click', hide);
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !detail.hidden) hide();
+  });
+  const initial = (window.location.hash || '').replace('#', '');
+  if (initial && grid.querySelector('[data-menu-card="' + initial + '"]')) show(initial, false);
+})();
