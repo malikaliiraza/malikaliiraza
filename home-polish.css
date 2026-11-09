@@ -410,3 +410,9 @@
     transition: none;
   }
 }
+
+/* Calmer gold halo behind the door on the home page (Nov 2026). */
+.hero .door::before {
+  inset: -6% -10%;
+  background: radial-gradient(closest-side, rgba(245, 214, 123, 0.07), rgba(212, 175, 55, 0.03) 55%, rgba(212, 175, 55, 0) 78%);
+}
