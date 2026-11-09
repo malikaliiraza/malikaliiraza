@@ -2287,3 +2287,8 @@ a.cat-card:hover, .proj-mini:hover { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5),
 .menu-detail .door__preview-title { font-size: 1.7rem; margin-bottom: 12px; }
 @media (max-width: 900px) { .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 600px) { .menu-grid { grid-template-columns: 1fr; } .menu-card { min-height: 0; } .menu-detail { padding: 22px 18px; } }
+
+/* Menu detail: keep the Back to menu button inside the detail panel, in normal flow, and align detail content to the left. */
+.menu-detail { position: relative; }
+.menu-detail .door__back { position: static; display: inline-block; margin-bottom: 18px; }
+.menu-detail .door__chip-group, .menu-detail .door__mini-links { justify-content: flex-start; }
