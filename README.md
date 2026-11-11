@@ -74,7 +74,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 | Project | What it is | Stack | Status |
 |---|---|---|---|
-| **CashWise AI** | Pakistan-first finance coach — PKR budget, offline-first expenses, Urdu/English overspend alerts | Flutter · Dart | In progress — MVP v1 — [Repo](https://github.com/malikaliiraza/CashWise-AI) |
+| **CashWise AI** | Flutter finance coach — offline expenses, cash-flow predictor, Loan Ledger with reminders, English/Urdu, Rs. amounts | Flutter · Dart | v5.8 — [Repo](https://github.com/malikaliiraza/CashWise-AI) |
 | **Personal Finance Manager** | OOP finance app — balance, categories, reminders, reports | C++ | Complete — [Repo](https://github.com/malikaliiraza/Personal-Finance-Manager-System) |
 | **Bus Ticket Reservation** | Admin + booking, live seat map, role-based discounts | C++ | Complete — [Repo](https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-) |
 | **Quiz Quest** | Terminal trivia — 16 questions, 3 rounds, lifelines | Python | Complete — [Repo](https://github.com/malikaliiraza/Quiz-Quest) |
