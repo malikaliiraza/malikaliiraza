@@ -23,7 +23,7 @@
 | **Strongest base** | OOP and problem solving — real projects in C++ and Python, not just tutorials |
 | **Current focus** | Flutter, Clean Architecture, REST APIs, Firebase — industry-ready mobile development |
 | **Best built project** | Personal Finance Manager — abstract classes, polymorphism, reports, 116 commits |
-| **Next level** | CashWise AI in progress, three future projects below — each with an AI, offline, or predictive feature |
+| **Next level** | Hisaab Kitaab in progress, three future projects below — each with an AI, offline, or predictive feature |
 | **Contact** | Portfolio and LinkedIn above |
 
 Focus: uncommon projects, or common projects with a future feature that makes them different.
@@ -54,7 +54,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 | **Public repositories** | 6 |
 | **Contributions (last year)** | 453 — as of 13 Nov 2026 |
 | **Main languages** | C++, Python, CSS |
-| **Built projects** | CashWise AI, Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
+| **Built projects** | Hisaab Kitaab, Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
 
 ---
 
@@ -74,7 +74,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 | Project | What it is | Stack | Status |
 |---|---|---|---|
-| **CashWise AI** | Flutter finance coach — offline expenses, cash-flow predictor, Loan Ledger, named budgets, custom reminders, English/Urdu, Rs. amounts | Flutter · Dart | v7.1 — [Repo](https://github.com/malikaliiraza/CashWise-AI) |
+| **Hisaab Kitaab** | Flutter finance coach — offline expenses, cash-flow predictor, Loan Ledger, named budgets, custom reminders, English/Urdu, Rs. amounts | Flutter · Dart | v7.1 — [Repo](https://github.com/malikaliiraza/Hisaab-Kitaab) |
 | **Personal Finance Manager** | OOP finance app — balance, categories, reminders, reports | C++ | Complete — [Repo](https://github.com/malikaliiraza/Personal-Finance-Manager-System) |
 | **Bus Ticket Reservation** | Admin + booking, live seat map, role-based discounts | C++ | Complete — [Repo](https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-) |
 | **Quiz Quest** | Terminal trivia — 16 questions, 3 rounds, lifelines | Python | Complete — [Repo](https://github.com/malikaliiraza/Quiz-Quest) |
