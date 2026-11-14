@@ -52,7 +52,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 | | |
 |---|---|
 | **Public repositories** | 6 |
-| **Contributions (last year)** | 453 — as of 13 Nov 2026 |
+| **Contributions (last year)** | 468 — as of 14 Nov 2026 |
 | **Main languages** | C++, Python, CSS |
 | **Built projects** | Hisaab Kitaab, Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
 
@@ -74,7 +74,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 | Project | What it is | Stack | Status |
 |---|---|---|---|
-| **Hisaab Kitaab** | Flutter finance coach — offline expenses, cash-flow predictor, Loan Ledger, named budgets, custom reminders, English/Urdu, Rs. amounts | Flutter · Dart | v7.1 — [Repo](https://github.com/malikaliiraza/Hisaab-Kitaab) |
+| **Hisaab Kitaab** | Flutter finance coach — offline expenses, cash-flow predictor, Loan Ledger, named budgets, custom reminders, Deep Midnight Teal theme, wallet + phone logo and welcome, English/Urdu, Rs. amounts | Flutter · Dart | v7.3 — [Repo](https://github.com/malikaliiraza/Hisaab-Kitaab) |
 | **Personal Finance Manager** | OOP finance app — balance, categories, reminders, reports | C++ | Complete — [Repo](https://github.com/malikaliiraza/Personal-Finance-Manager-System) |
 | **Bus Ticket Reservation** | Admin + booking, live seat map, role-based discounts | C++ | Complete — [Repo](https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-) |
 | **Quiz Quest** | Terminal trivia — 16 questions, 3 rounds, lifelines | Python | Complete — [Repo](https://github.com/malikaliiraza/Quiz-Quest) |
