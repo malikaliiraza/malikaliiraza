@@ -23,7 +23,7 @@
 | **Strongest base** | OOP and problem solving — real projects in C++ and Python, not just tutorials |
 | **Current focus** | Flutter, Clean Architecture, REST APIs, Firebase — industry-ready mobile development |
 | **Best built project** | Personal Finance Manager — abstract classes, polymorphism, reports, 116 commits |
-| **Next level** | Hisaab Kitaab v7.5, SafeRide Campus in progress, two future projects below — each with an AI, offline, or predictive feature |
+| **Next level** | Hisaab Kitaab v7.5, SafeRide Campus and LearnLoop AI in progress, one future project below — each with an AI, offline, or predictive feature |
 | **Contact** | Portfolio and LinkedIn above |
 
 Focus: uncommon projects, or common projects with a future feature that makes them different.
@@ -51,10 +51,10 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 | | |
 |---|---|
-| **Public repositories** | 7 |
-| **Contributions (last year)** | 500 — as of 16 Nov 2026 |
+| **Public repositories** | 8 |
+| **Contributions (last year)** | 516 — as of 17 Nov 2026 |
 | **Main languages** | C++, Python, CSS |
-| **Built projects** | Hisaab Kitaab, SafeRide Campus, Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
+| **Built projects** | Hisaab Kitaab, SafeRide Campus, LearnLoop AI, Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
 
 ---
 
@@ -76,6 +76,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 |---|---|---|---|
 | **Hisaab Kitaab** | Flutter finance coach — offline expenses, cash-flow predictor, Loan Ledger, named budgets, custom reminders, recurring bills, Backup & Export, savings goals, monthly report, PIN lock, Continue with Google, Deep Midnight Teal theme, wallet + phone logo and welcome, English/Urdu, Rs. amounts | Flutter · Dart | v7.5 — [Repo](https://github.com/malikaliiraza/Hisaab-Kitaab) |
 | **SafeRide Campus** | University bus safety — AI delay predictor, parent safe-arrival alerts, offline QR ticket, for Pakistani universities | Flutter · Dart | v0.1.0 — scaffold — [Repo](https://github.com/malikaliiraza/SafeRide-Campus) |
+| **LearnLoop AI** | Quizzes from your own notes — AI tutor re-explains wrong answers in simple Urdu or English, spaced repetition (SM-2) | Flutter · Dart | v0.1.0 — scaffold — [Repo](https://github.com/malikaliiraza/LearnLoop-AI) |
 | **Personal Finance Manager** | OOP finance app — balance, categories, reminders, reports | C++ | Complete — [Repo](https://github.com/malikaliiraza/Personal-Finance-Manager-System) |
 | **Bus Ticket Reservation** | Admin + booking, live seat map, role-based discounts | C++ | Complete — [Repo](https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-) |
 | **Quiz Quest** | Terminal trivia — 16 questions, 3 rounds, lifelines | Python | Complete — [Repo](https://github.com/malikaliiraza/Quiz-Quest) |
@@ -103,14 +104,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 ---
 
 ## Future Projects — Roadmap
-
-### 1. LearnLoop AI — Quizzes From Your Own Notes
-**Not just another quiz app.**
-- Upload a PDF or notes, AI generates a quiz from them
-- Spaced repetition and weak-topic analytics
-- **AI Tutor:** On a wrong answer, it does not just say "wrong" — it re-explains the concept in simple Urdu or English
-
-### 2. CropDoctor Offline — On-Device AI for Farmers
+### 1. CropDoctor Offline — On-Device AI for Farmers
 **Not just an information app.**
 - Phone camera detects crop disease — offline, with on-device AI
 - Urdu voice guidance: what the problem is, and what to do about it
