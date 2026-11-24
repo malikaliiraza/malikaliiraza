@@ -7,7 +7,7 @@
 **Software Engineering Undergraduate · Riphah International University · Sahiwal, Pakistan**
 
 [![Open to Work](https://img.shields.io/badge/Open_to-Internships_and_Freelance-brightgreen?style=for-the-badge)](https://www.linkedin.com/in/malikaliraza/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-malikaliiraza.github.io-blue?style=for-the-badge)](https://malikaliiraza.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-malikaliiraza.github.io-blue?style=for-the-badge)](https://malikaliiraza.github.io/malikaliiraza/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/malikaliraza/)
 [![Flutter](https://img.shields.io/badge/Focus-Flutter_and_Dart-02569B?style=for-the-badge&logo=flutter)](https://github.com/malikaliiraza)
 ![Profile Views](https://komarev.com/ghpvc/?username=malikaliiraza&color=00B4D8&style=flat-square)
@@ -81,7 +81,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 | **Bus Ticket Reservation** | Admin + booking, live seat map, role-based discounts | C++ | Complete — [Repo](https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-) |
 | **Quiz Quest** | Terminal trivia — 16 questions, 3 rounds, lifelines | Python | Complete — [Repo](https://github.com/malikaliiraza/Quiz-Quest) |
 | **Apex Dash** | Rhythm obstacle game — auto-scroll, collision, score | Scratch 3.0 | Complete — [Repo](https://github.com/malikaliiraza/Apex-Dash) |
-| **Portfolio Website** | My personal portfolio site | HTML · CSS · JS | Live — [Site](https://malikaliiraza.github.io) |
+| **Portfolio Website** | My personal portfolio site | HTML · CSS · JS | Live — [Site](https://malikaliiraza.github.io/malikaliiraza/) |
 
 ---
 
@@ -141,7 +141,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 
 **Internships · Freelance · Flutter / Full-Stack Collaboration**
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00B4D8?style=for-the-badge)](https://malikaliiraza.github.io)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00B4D8?style=for-the-badge)](https://malikaliiraza.github.io/malikaliiraza/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/malikaliraza/)
 
 *Thank you for visiting my profile — work on the future projects above is in progress. Stay tuned.*
