@@ -23,7 +23,7 @@
 | **Strongest base** | OOP and problem solving — real projects in C++ and Python, not just tutorials |
 | **Current focus** | Flutter, Clean Architecture, REST APIs, Firebase — industry-ready mobile development |
 | **Best built project** | Personal Finance Manager — abstract classes, polymorphism, reports, 116 commits |
-| **Next level** | Hisaab Kitaab v7.9, SafeRide Campus v0.2.1 and LearnLoop AI in progress, one future project below — each with an AI, offline, or predictive feature |
+| **Next level** | Hisaab Kitaab v7.9, SafeRide Campus v0.2.1 and LearnLoop AI v0.2.1 in progress, one future project below — each with an AI, offline, or predictive feature |
 | **Contact** | Portfolio and LinkedIn above |
 
 Focus: uncommon projects, or common projects with a future feature that makes them different.
@@ -52,7 +52,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 | | |
 |---|---|
 | **Public repositories** | 8 |
-| **Contributions (last year)** | 603 — as of 24 Nov 2026 |
+| **Contributions (last year)** | 624 — as of 25 Nov 2026 |
 | **Main languages** | C++, Python, CSS |
 | **Built projects** | Hisaab Kitaab, SafeRide Campus, LearnLoop AI, Personal Finance Manager, Bus Ticket Reservation, Quiz Quest, Apex Dash, Portfolio Website |
 
@@ -76,7 +76,7 @@ Focus: uncommon projects, or common projects with a future feature that makes th
 |---|---|---|---|
 | **Hisaab Kitaab** | Flutter finance coach — offline expenses, cash-flow predictor, Loan Ledger, named budgets, custom reminders, recurring bills, Backup & Export, savings goals, monthly report, PIN lock, Continue with Google, 6-month spending trend, month-over-month comparison, per-category monthly caps, yearly overview, duplicate expense, expense search, filter and sort, custom expense categories, Deep Midnight Teal theme, wallet + phone logo and welcome, English/Urdu, Rs. amounts | Flutter · Dart | v7.9 — [Repo](https://github.com/malikaliiraza/Hisaab-Kitaab) |
 | **SafeRide Campus** | University bus safety — AI delay predictor, parent safe-arrival alerts, offline QR ticket, for Pakistani universities | Flutter · Dart | v0.2.1 — Android platform support, custom launcher icon + web icons, live GPS tracking, delay prediction from recorded trips, QR scan + validation, parent alerts via local notifications — [Repo](https://github.com/malikaliiraza/SafeRide-Campus) |
-| **LearnLoop AI** | Quizzes from your own notes — AI tutor re-explains wrong answers in simple Urdu or English, spaced repetition (SM-2) | Flutter · Dart | v0.2.0 — real PDF/.txt import, fill-in-the-blank questions, tutor names your wrong pick, SM-2 schedule saved on device — [Repo](https://github.com/malikaliiraza/LearnLoop-AI) |
+| **LearnLoop AI** | Quizzes from your own notes — AI tutor re-explains wrong answers in simple Urdu or English, spaced repetition (SM-2) | Flutter · Dart | v0.2.1 — Android platform support, custom launcher icon + web icons, real PDF/.txt import, fill-in-the-blank questions, tutor names your wrong pick, SM-2 schedule saved on device — [Repo](https://github.com/malikaliiraza/LearnLoop-AI) |
 | **Personal Finance Manager** | OOP finance app — balance, categories, reminders, reports | C++ | Complete — [Repo](https://github.com/malikaliiraza/Personal-Finance-Manager-System) |
 | **Bus Ticket Reservation** | Admin + booking, live seat map, role-based discounts | C++ | Complete — [Repo](https://github.com/malikaliiraza/Bus-Ticket-Reservation-System-) |
 | **Quiz Quest** | Terminal trivia — 16 questions, 3 rounds, lifelines | Python | Complete — [Repo](https://github.com/malikaliiraza/Quiz-Quest) |
